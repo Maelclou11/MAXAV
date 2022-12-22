@@ -5,7 +5,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Poppins';
-    
+
 }
 :root{
     --main-color-: rgb(109, 10, 222);
@@ -248,22 +248,18 @@ section img#mountains_front{
 }
 
 .bg{
-    position: absolute;
+    position: fixed;
     display: flex;
-    z-index: 2;
+    z-index: 101;
 }
 .bgBox1{
     height: 100vh;
-    max-height: 100vh;
-    overflow-y: hidden;
     width: 50vw;
     background: linear-gradient(blue, rgb(225, 23, 225));
     transition: all 1s ease-in-out;
 }
 .bgBox2{
     height: 100vh;
-    max-height: 100vh;
-    overflow-y: hidden;
     width: 50vw;
     background: linear-gradient(blue, rgb(225, 23, 225));
     transition: all 1s ease-in-out;
@@ -274,6 +270,9 @@ section img#mountains_front{
 .bgBox2.active{
     transform: translateX(100%);
 
+}
+.sectionHeadline.active .bg{
+    z-index: 0;
 }
 .sectionHeadline.active .textHeadline{
     animation: animate1 1s forwards;
@@ -289,8 +288,8 @@ section img#mountains_front{
 .aboveBg{
     width: fit-content;
     min-height: 300px;
-    position: absolute;
-    z-index: 3;
+    position: fixed;
+    z-index: 102;
     display: flex;
     flex-direction: column;
     align-items: center;
