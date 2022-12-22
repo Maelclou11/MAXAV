@@ -12,6 +12,9 @@
     --main-color-hover-: rgb(82, 8, 167);
     --color-bg-: rgb(119, 0, 255);
 }
+h2{
+    margin-bottom: unset;
+}
 section{
     position: relative;
     width: 100%;
@@ -202,7 +205,7 @@ section img#mountains_front{
     z-index: 3;
     padding: 3px 5%;
     overflow: hidden;
-    margin-top: 20px;
+    margin-bottom: unset;
     font-family: 'Roboto',sans-serif;
     font-weight: 700;
 }
@@ -273,7 +276,7 @@ section img#mountains_front{
 
 }
 .sectionHeadline.active .bg{
-    z-index: -1;
+    z-index: 0;
 }
 .sectionHeadline.active .aboveBg{
     animation: animate1 1s forwards;
@@ -319,6 +322,7 @@ section img#mountains_front{
 }
 .behind h1{
     color: #fff;
+    letter-spacing: 1px;
 }
 /* #endregion */
 
@@ -332,43 +336,43 @@ section img#mountains_front{
         top: unset ;
         left: unset;
         bottom: 0;
-        height: 70px;
-        width: 100%;
+        height: 100%;
+        width: 50%;
         overflow-x: visible;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    .naviguation.active{
+        width: 50%;
+        height: 100%;
+        transform: scaleX(1);
     }
     .naviguation ul{
         display: flex;
         padding-top: 0;
         transition: all 0.5s ease-in-out;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
     }
     .naviguation ul li{
         position: relative;
         list-style: none;
         width: 100%;
-        border-top-left-radius: unset;
-        border-bottom-left-radius: unset;
-        border-radius: 20px;
-    }
-    .naviguation ul li a .title{
-        display: none;
-    }
-    .naviguation.active ul li .title{
-        display: block;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+/*         border-radius: 20px; */
     }
     .naviguation ul li a{
         display: flex;
         justify-content: center;
     }
-    .naviguation ul li.active b:nth-child(1),
+/*     .naviguation ul li.active b:nth-child(1),
     .naviguation ul li.active b:nth-child(2)
     {
         display: none;
         transform: scale(0);
-    }
-    .naviguation.active{
-        width: 100%;
-        height: 100%;
-    }
+    } */
     .naviguation.active ul{
         height: 100%;
         flex-direction: column;
@@ -376,6 +380,9 @@ section img#mountains_front{
     }
     .toggle.active{
         z-index: 104;
+    }
+    .aboveBg{
+        width: 80%;
     }
 }
 /* #endregion */
