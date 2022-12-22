@@ -201,6 +201,8 @@ section img#mountains_front{
     padding: 3px 5%;
     overflow: hidden;
     margin-top: 20px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
 }
 .textHeadline::after{
     content: '';
