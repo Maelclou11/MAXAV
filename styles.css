@@ -38,6 +38,7 @@ section{
     background: var(--main-color-);
     transition: all 0.5s ease-in-out;
     overflow-x: hidden;
+    z-index: 103;
 }
 .naviguation.active{
     width: 300px;
@@ -272,9 +273,9 @@ section img#mountains_front{
 
 }
 .sectionHeadline.active .bg{
-    z-index: 0;
+    z-index: -1;
 }
-.sectionHeadline.active .textHeadline{
+.sectionHeadline.active .aboveBg{
     animation: animate1 1s forwards;
     transition: all 0.5s ease-in-out;
 }
@@ -285,15 +286,32 @@ section img#mountains_front{
     transition-delay: 0.3s;
     transform: scaleX(1);
 }
+.sectionHeadline.active .aboveBg h1{
+    display: none;
+}
+.sectionHeadline.active .aboveBg a{
+    display: none;
+}
 .aboveBg{
+    padding: 0 20px;
     width: fit-content;
-    min-height: 300px;
     position: fixed;
     z-index: 102;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    transition: all 0.5s ease-in-out;
+    animation-delay: 1s;
+    max-width: 60vw;
+    margin-top: 20px;
+}
+.aboveBg h1{
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 200;
+    color: #fff;
+    margin-bottom: 30px;
 }
 .behind{
     text-align: center;
@@ -301,5 +319,63 @@ section img#mountains_front{
 }
 .behind h1{
     color: #fff;
+}
+/* #endregion */
+
+
+/*#region    ENTERING UNDER 700PX  */
+@media screen and (max-width: 700px) {
+    .behind{
+        width: 100%;
+    }
+    .naviguation{
+        top: unset ;
+        left: unset;
+        bottom: 0;
+        height: 70px;
+        width: 100%;
+        overflow-x: visible;
+    }
+    .naviguation ul{
+        display: flex;
+        padding-top: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .naviguation ul li{
+        position: relative;
+        list-style: none;
+        width: 100%;
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+        border-radius: 20px;
+    }
+    .naviguation ul li a .title{
+        display: none;
+    }
+    .naviguation.active ul li .title{
+        display: block;
+    }
+    .naviguation ul li a{
+        display: flex;
+        justify-content: center;
+    }
+    .naviguation ul li.active b:nth-child(1),
+    .naviguation ul li.active b:nth-child(2)
+    {
+        display: none;
+        transform: scale(0);
+    }
+    .naviguation.active{
+        width: 100%;
+        height: 100%;
+    }
+    .naviguation.active ul{
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .toggle.active{
+        z-index: 104;
+    }
 }
 /* #endregion */
