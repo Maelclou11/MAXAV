@@ -29,7 +29,7 @@ section{
     position: fixed;
     top: 20px;
     left: 20px;
-    bottom: 20px;
+    height: 400px;
     width: 70px;
     border-radius: 10px;
     box-sizing: initial;
@@ -171,6 +171,8 @@ section{
 .sectionHeadline{
     height: 100vh;
     width: 100vw;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
 }
 section img{
     position: absolute;
@@ -191,11 +193,29 @@ section img#mountains_front{
 {
     color: #fff;
     white-space: nowrap;
-    font-size: 7.5vw;
+    font-size: 6vw;
     z-index: 1;
     transition: all 0.5s ease-in-out;
     animation-delay: 1s;
     z-index: 3;
+    padding: 3px 5%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.textHeadline::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--main-color-);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transition-delay: 2s;
+    transition: all 1s ease-in-out;
+    transform-origin: left;
+    border-radius: 60px;
 }
 @keyframes animate1 {
     0%{
@@ -225,35 +245,43 @@ section img#mountains_front{
 }
 
 .bg{
-    position: fixed;
+    position: absolute;
     display: flex;
     z-index: 2;
 }
 .bgBox1{
     height: 100vh;
+    max-height: 100vh;
+    overflow-y: hidden;
     width: 50vw;
     background: linear-gradient(blue, rgb(225, 23, 225));
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .bgBox2{
     height: 100vh;
+    max-height: 100vh;
+    overflow-y: hidden;
     width: 50vw;
     background: linear-gradient(blue, rgb(225, 23, 225));
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .bgBox1.active{
     transform: translateX(-100%);
 }
 .bgBox2.active{
     transform: translateX(100%);
+
 }
 .sectionHeadline.active .textHeadline{
-    color: black;
     animation: animate1 1s forwards;
     transition: all 0.5s ease-in-out;
 }
 .sectionHeadline.active #btnExplore{
     display: none;
+}
+.sectionHeadline.active .textHeadline::after{
+    transition-delay: 0.3s;
+    transform: scaleX(1);
 }
 .aboveBg{
     width: fit-content;
@@ -264,5 +292,12 @@ section img#mountains_front{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+.behind{
+    text-align: center;
+    width: 70%;
+}
+.behind h1{
+    color: #fff;
 }
 /* #endregion */
