@@ -1,0 +1,193 @@
+<li class="list active">
+    <b></b>
+    <b></b>
+    <a href="#">
+        <span class="icon"><i class="fa-solid fa-house"></i></span>
+        <span class="title">Accueil</span>
+    </a>
+</li>
+<li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+        <span class="icon"><i class="fa-solid fa-store"></i></span>
+        <span class="title">Service</span>
+    </a>
+</li>
+<li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+        <span class="icon"><i class="fa-regular fa-folder-open"></i></span>
+        <span class="title">Travaux</span>
+    </a>
+</li>
+<li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+        <span class="icon"><i class="fa-solid fa-user"></i></span>
+        <span class="title">Mission</span>
+    </a>
+</li>
+<li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+        <span class="title">Contact</span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+.navigation,
+.toggle{
+    z-index: 100;
+}
+.navigation{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 400px;
+    width: 70px;
+    border-radius: 10px;
+    box-sizing: initial;
+    border-left: 5px solid var(--main-color-hover-);
+    background: var(--main-color-);
+    transition: all 0.5s ease-in-out;
+    overflow-x: hidden;
+    z-index: 100;
+    
+}
+.navigation.active{
+    width: 300px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li.active{
+    background: #fff;
+}
+.navigation ul li b:nth-child(1){
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background: #fff;
+    display: none;
+}
+.navigation ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background-color: var(--main-color-);
+}
+
+.navigation ul li b:nth-child(2){
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background: #fff;
+    display: none;
+}
+.navigation ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background-color: var(--main-color-);
+}
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2){
+    display: block;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li.active a{
+    color: #333;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icon i{
+    font-size: 1.5em;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+    width: 120px;
+}
+
+.toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--main-color-);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.toggle.active{
+    background: var(--main-color-hover-);
+}
+.toggle i{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+}
+.toggle i.open,
+.toggle.active i.close{
+    display: block;
+}
+.toggle.active i.open,
+.toggle i.close{
+    display: none;
+}
