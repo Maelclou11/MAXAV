@@ -35,15 +35,16 @@
 
                 <i class="fa-solid fa-bars open"></i>
                 <i class="fa-solid fa-xmark close"></i>
+
             </div>
         </header>
         <!-- #endregion -->
         <!--#region         BackGround -->
-        <section class="sectionHeadline">
+        <section class="sectionHeadline active">
 
-            <div class="bg">
-                <div class="bgBox1"></div>
-                <div class="bgBox2"></div>
+            <div class="bg active">
+                <div class="bgBox1 active"></div>
+                <div class="bgBox2 active"></div>
             </div>
 
             <div class="aboveBg">
@@ -62,6 +63,59 @@
                 <h2>Parallax Scrolling Effects</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
+        <!-- #endregion -->
+        <!--#region     BESOINSITE -->
+        <section class="icon">
+            <div class="bSite">
+                <h1>Pour quelles raisons</h1>
+                <h3>l'un de nos site</h3> 
+                <p>vous conviendrait?<p>
+            </div>
+            <div class="bSite1 bSiteAll">
+                <h1>Pour quelles raisons ?</h1>
+                <h3>La Visibilité</h3> 
+                <p>Un site web permet à votre entreprise d'être visible sur internet, ce qui peut être particulièrement utile si vous souhaitez atteindre de nouveaux clients.</p>
+            </div>
+            <div class="bSite2 bSiteAll">
+                <h1>Pour quelles raisons ?</h1>
+                <h3>L'Accessibilité</h3> 
+                <p>Avec un site web, votre entreprise est accessible 24 heures sur 24, 7 jours sur 7, ce qui est particulièrement pratique pour les clients qui ne peuvent pas se rendre physiquement dans votre entreprise.</p>
+            </div>
+            <div class="bSite3 bSiteAll">
+                <h1>Pour quelles raisons ?</h1>
+                <h3>Crédibilité</h3> 
+                <p>avoir un site web professionnel peut renforcer la crédibilité de votre entreprise aux yeux de vos clients et de vos prospects.</p>
+            </div>
+            <div class="bSite4 bSiteAll">
+                <h1>Pour quelles raisons ?</h1>
+                <h3>L'Efficacité</h3> 
+                <p>Un site web peut vous aider à gérer votre entreprise de manière plus efficace en vous permettant de communiquer de manière ciblée avec vos clients et de gérer vos commandes et vos paiements en ligne.</p>
+            </div>
+            <div class="bSite5 bSiteAll">
+                <h1>Pour quelles raisons ?</h1>
+                <h3>Économies</h3> 
+                <p>un site web peut vous permettre de réaliser des économies en vous permettant de communiquer de manière plus efficace avec vos clients et en réduisant les coûts de marketing et de communication.</p>
+            </div>
+            <div class="icon3D">
+                <ul>
+                    <li class="icon1">
+                        <i class="fa-solid fa-1"></i>
+                    </li>
+                    <li class="icon2">
+                        <i class="fa-solid fa-2"></i>
+                    </li>
+                    <li class="icon3">
+                        <i class="fa-solid fa-3"></i>
+                    </li>
+                    <li class="icon4">
+                        <i class="fa-solid fa-4"></i>
+                    </li>
+                    <li class="icon5">
+                        <i class="fa-solid fa-5"></i>
+                    </li>
+                </ul>
+            </div>
+        </section>
         <!-- #endregion -->
         <!--#region         FOOTER  -->
         <div class="art">
@@ -160,7 +214,60 @@
                 var header = document.querySelector("header");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
-        </script>
 
+            // texte apparait lorsque mouse hover
+
+            var icon1 = document.querySelector(".icon1");
+            var divIcon = document.querySelector(".bSite");
+            var divIcon1 = document.querySelector(".bSite1");
+            icon1.addEventListener("mouseover",function(){
+                divIcon.classList.add('normalDivNone');     //when toggle = display: none;
+                divIcon1.classList.add('div1On');    //when toggle = display : block;
+            })
+            icon1.addEventListener("mouseout",function(){
+                divIcon.classList.remove('normalDivNone');
+                divIcon1.classList.remove('div1On');
+            })
+            var icon2 = document.querySelector(".icon2");
+            var divIcon2 = document.querySelector(".bSite2");
+            icon2.addEventListener("mouseover",function(){
+                divIcon.classList.add('normalDivNone');     //when toggle = display: none;
+                divIcon2.classList.add('div1On');    //when toggle = display : block;
+            })
+            icon2.addEventListener("mouseout",function(){
+                divIcon.classList.remove('normalDivNone');
+                divIcon2.classList.remove('div1On');
+            })
+            var icon3 = document.querySelector(".icon3");
+            var divIcon3 = document.querySelector(".bSite3");
+            icon3.addEventListener("mouseover",function(){
+                divIcon.classList.add('normalDivNone');     //when toggle = display: none;
+                divIcon3.classList.add('div1On');    //when toggle = display : block;
+            })
+            icon3.addEventListener("mouseout",function(){
+                divIcon.classList.remove('normalDivNone');
+                divIcon3.classList.remove('div1On');
+            })
+            var icon4 = document.querySelector(".icon4");
+            var divIcon4 = document.querySelector(".bSite4");
+            icon4.addEventListener("mouseover",function(){
+                divIcon.classList.add('normalDivNone');     //when toggle = display: none;
+                divIcon4.classList.add('div1On');    //when toggle = display : block;
+            })
+            icon4.addEventListener("mouseout",function(){
+                divIcon.classList.remove('normalDivNone');
+                divIcon4.classList.remove('div1On');
+            })
+            var icon5 = document.querySelector(".icon5");
+            var divIcon5 = document.querySelector(".bSite5");
+            icon5.addEventListener("mouseover",function(){
+                divIcon.classList.add('normalDivNone');     //when toggle = display: none;
+                divIcon5.classList.add('div1On');    //when toggle = display : block;
+            })
+            icon5.addEventListener("mouseout",function(){
+                divIcon.classList.remove('normalDivNone');
+                divIcon5.classList.remove('div1On');
+            })
+        </script>
     </body>
 </html>
