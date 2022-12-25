@@ -23,10 +23,9 @@ section{
     justify-content: center;
     align-items: center;
 }
-/* body{
-    overflow-y: hidden;
+body{
     overflow-x: hidden;
-} */
+}
 body.explored{
     overflow-y: visible;
     overflow-x: hidden;
@@ -145,8 +144,11 @@ header.sticky .ulNav{
     height: 100vh;
     width: 100vw;
     max-width: 100vw;
-    background-image: url(img/bg.jpg);
+    background-image: url(img/bg3.jfif);
     background-size: cover;
+    background-position: 0 30%;
+    background-repeat: no-repeat;
+    display: flex;
 }
 section img{
     position: absolute;
@@ -271,7 +273,6 @@ section img#mountains_front{
 }
 .aboveBg{
     padding: 0 20px;
-    width: fit-content;
     position: absolute;
     z-index: 104;            /* REMETTRE A 104 */
     display: flex;
@@ -280,7 +281,6 @@ section img#mountains_front{
     justify-content: space-around;
     transition: all 0.5s ease-in-out;
     animation-delay: 1s;
-    max-width: 60vw;
     margin-top: 20px;
 }
 .aboveBg h1{
@@ -305,14 +305,62 @@ section img#mountains_front{
     padding: 100px 30px !important;
     background: #bcbcbc63;
 }
+.icon .h1Icon{
+    position: absolute;
+    top: 5%;
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    background-image: linear-gradient(to right, #002654, #4f0056);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+    padding: 0 20px;
+}
 .bSiteAll{
+    top: 13%;
+    position: absolute;
+    height: 30vh;
+    width: 80%;
+    padding: 0px;
+    margin: 10px;
+    vertical-align: top;
+    align-items:center;
+    justify-content: space-evenly;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
     transform: translateY(50%);
+    display: flex;
+}
+.icon .bSiteAll h1{
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    background-image: linear-gradient(to right, #002654, #4f0056);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: all 0.5s ease-in-out;
     transition-delay: 0.2s;
 }
+.icon .bSiteAll .imgBox{
+    width: 40%;
+    height: 30vh;
+    display: flex;
+}
+.icon .bSiteAll .imgBox img{
+    position: relative;
+}
+.icon .bSiteAll p{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
 .bSiteAll h1,
 .bSiteAll h3,
-.bSiteAll p{
+.bSiteAll p,
+.bSiteAll .imgBox{
     opacity: 0;
     transition: all 0.5s ease-in-out;
     transition-delay: 0.2s;
@@ -345,43 +393,16 @@ section img#mountains_front{
 .icon .bSite.normalDivNone{
     opacity: 0;
 }
-
-.icon .bSiteAll{
-    top: 10%;
-    position: absolute;
-    height: 30vh;
-    width: 100%;
-    padding: 0px;
-    margin: 10px;
-    vertical-align: top;
-    align-items:flex-start;
-    flex-direction: column;
-    padding-left: 13%;
-    transition: all 0.5s ease-in-out;
-    transition-delay: 0.2s;
-}
-.icon .bSiteAll h1{
-    font-size: 40px;
-    font-family: 'Poppins';
-    font-weight: 800;
-    background-image: linear-gradient(to right, #002654, #4f0056);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.5s ease-in-out;
-    transition-delay: 0.2s;
-}
 .icon .bSite1.div1On{
-    display: flex;
     transform: translateY(0);
 }
 .icon .bSite1.div1On h1,
 .icon .bSite1.div1On h3,
-.icon .bSite1.div1On p{
+.icon .bSite1.div1On p,
+.icon .bSite1.div1On .imgBox{
     opacity: 1;
 }
 .icon .bSite2.div1On{
-    display: flex;
     transform: translateY(0);
 }
 .icon .bSite2.div1On h1,
@@ -390,7 +411,6 @@ section img#mountains_front{
     opacity: 1;
 }
 .icon .bSite3.div1On{
-    display: flex;
     transform: translateY(0);
 }
 .icon .bSite3.div1On h1,
@@ -399,7 +419,6 @@ section img#mountains_front{
     opacity: 1;
 }
 .icon .bSite4.div1On{
-    display: flex;
     transform: translateY(0);
 }
 .icon .bSite4.div1On h1,
@@ -408,7 +427,6 @@ section img#mountains_front{
     opacity: 1;
 }
 .icon .bSite5.div1On{
-    display: flex;
     transform: translateY(0);
 }
 .icon .bSite5.div1On h1,
@@ -766,24 +784,24 @@ hr{
     .icon ul li{
         margin: 0px 40px;
     }
-    .icon .bSiteAll{
-        padding-left: 10%;
-    }
 }
 /* #endregion */
 /*#region    ENTERING UNDER 850PX  */
 @media screen and (max-width: 850px) {
+    .sectionHeadline{
+        padding: 40px;
+    }
     .behind{
-        width: 100%;
+        width: 90vw;
+    }
+    .textHeadline{
+        font-size: 8vw;
     }
     .toggle{
         display: flex;
     }
     .toggle.active{
         z-index: 104;
-    }
-    .aboveBg{
-        width: 80%;
     }
     .navigation ul{
         position: absolute;
@@ -831,6 +849,15 @@ hr{
     }
     footer{
         clip-path: polygon(0% 2%, 25% 0%, 100% 3%, 100% 100%, 0% 100%);
+    }
+    .bSiteAll{
+        top: 20%;
+    }
+    .icon .h1Icon{
+        font-size: 30px;
+    }
+    .icon .bSiteAll h1{
+        font-size: 30px;
     }
 }
 /* #endregion */
