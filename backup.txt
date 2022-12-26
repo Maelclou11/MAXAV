@@ -441,3 +441,21 @@
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
     box-shadow: -50px 50px 50px rgba(76, 4, 178, 0.5);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*             icon5.addEventListener("mouseout",function(){
+                divIcon.classList.remove('normalDivNone');
+                divIcon5.classList.remove('div1On');
+            }) */
