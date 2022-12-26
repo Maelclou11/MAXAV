@@ -20,15 +20,15 @@
         crossorigin="anonymous"></script>
     </head>
     <body>
-        <!--#region          LOADING -->
+        <!--#region         LOADING -->
         <div class="loading">
             <div class="cube">
                 <div class="top"></div>
                 <div class="div">
                     <span style="--i:0;">MXB</span>
-                    <span style="--i:1;">Tech</span>
+                    <span style="--i:1;"><p>TECH</p></span>
                     <span style="--i:2;">MXB</span>
-                    <span style="--i:3;">Tech</span>
+                    <span style="--i:3;"><p>TECH</p></span>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
             </div>
         </header>
         <!-- #endregion -->
-        <!--#region         BackGround -->
+        <!--#region         ACCUEIL -->
         <section class="sectionHeadline active">
 
             <div class="bg active">
@@ -64,7 +64,7 @@
             </div>
 
             <div class="aboveBg">
-                <h2 class="textHeadline">MXB Développement</h2>
+                <h2 class="textHeadline">MXB Tech</h2>
                 <h1>Ouvrez de nouvelle porte avec un nouveau site web affordable qui reflete votre entreprise !</h1>
                 <a href="#" id="btnExplore">Explorer</a>
             </div>
@@ -74,12 +74,51 @@
                 <h1>Commencer dès demain la construction de votre site web !</h1>
             </div>
         </section>
-
-            <div class="sec">
-                <h2>Parallax Scrolling Effects</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></p>
-            </div>
         <!-- #endregion -->
+        <!--#region         WHY US ?  -->
+        <section class="sectionWhy">
+            <div class="forme forme1"></div>
+            <div class="forme forme2"></div>
+            <div class="forme forme3"></div>
+            <div class="divWhy">
+                <h1>En quoi sommes-nous différents ?</h1>
+                <div class="containerRaison">
+                    <h3>Optimiser votre site pour <span class="specialWord">VOUS</span>.</h3>
+                    <p>
+                        Nous comprenons que chaque projet est unique et requiert une approche personnalisée.
+                        C'est pourquoi nous nous adaptons à chacun d'entre eux afin d'obtenir un résultat final plus que convaincant et 
+                        totalement optimiser pour <span class="specialWord">VOTRE</span> entreprise. Nous prenons le temps de comprendre vos besoins et vos objectifs, et 
+                        nous travaillons en étroite collaboration avec vous pour répondre parfaitement à vos exigences. Nous sommes à 
+                        l'écoute de vos idées et de vos suggestions, et nous nous efforçons de créer un site web qui vous ressemble et qui vous aidera à atteindre vos objectifs.
+                    </p>
+                </div>
+                <div class="containerRaison">
+                    <h3>Nous sommes à l'écoute</h3>
+                    <p>
+                        Nous mettons un point d'honneur à écouter attentivement les besoins de nos clients
+                        et à leur offrir un site web qui répond parfaitement à leurs attentes. Nous veillons
+                        à ce que la communication soit facile et agréable. Nous sommes à votre disposition pour
+                        répondre à toutes vos questions et vous accompagner tout au long de la création de votre site.
+                        Nous sommes convaincus que la collaboration est la clé d'un projet réussi et nous sommes impatients
+                         de travailler avec vous pour le réaliser de manière simple et efficace.
+                    </p>
+                </div>
+                <div class="containerRaison">
+                    <h3>Entièrement personnalisable</h3>
+                    <p>
+                        Il y a plusieurs avantages à avoir un site fait sur mesure pour votre entreprise. Tout d'abord, vous
+                        avez le contrôle total sur la personnalisation de votre site, vous pouvez décider de tous les éléments
+                        qui y figurent, des couleurs et des polices utilisées jusqu'aux aux fonctionnalités incluses. Cela vous 
+                        permet de créer un site web qui reflète exactement votre image de marque et qui répond parfaitement à vos
+                        besoins spécifiques. De plus, nos sites sont conçus de manière à être facilement mis à jour et à être évolutif.
+                        Cela vous permet de le modifier et de l'ajuster au fil du temps, afin de suivre les changements de votre entreprise et de vos besoins.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- #endregion -->
+
+
         <!--#region         BESOINSITE -->
         <section class="icon">
             <h1 class="h1Icon">Quelles avantages à avoir un site ?</h1>
@@ -198,11 +237,14 @@
             </footer>
             </div>
         <!--#endregion -->
-        <!-- Script -->
+        <!--#region         SCRIPT  -->
         <script>
             //loading section
             $(window).on("load",function(){
-                $(".loading").fadeOut("slow");
+                $(this).delay(0).queue(function() {      //changer le delai de chargement ici pour le tester
+                    $(".loading").fadeOut("slow");
+                    $(this).dequeue();
+                });
             });
 
 
@@ -311,5 +353,6 @@
                 oneIsActive = true;
             })
         </script>
+        <!-- #endregion -->
     </body>
 </html>
