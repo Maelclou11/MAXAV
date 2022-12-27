@@ -578,3 +578,170 @@
         transform: translateY(-10vh) scale(0.6);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="forme forme1"></div>
+<div class="forme forme2"></div>
+<div class="forme forme3"></div>
+<div class="divWhy">
+    <h1>En quoi sommes-nous différents ?</h1>
+<div class="containerRaison">
+    <h3>Optimiser votre site pour <span class="specialWord">VOUS</span>.</h3>
+    <p>
+        Nous comprenons que chaque projet est unique et requiert une approche personnalisée.
+        C'est pourquoi nous nous adaptons à chacun d'entre eux afin d'obtenir un résultat final plus que convaincant et 
+        totalement optimiser pour <span class="specialWord">VOTRE</span> entreprise. Nous prenons le temps de comprendre vos besoins et vos objectifs, et 
+        nous travaillons en étroite collaboration avec vous pour répondre parfaitement à vos exigences. Nous sommes à 
+        l'écoute de vos idées et de vos suggestions, et nous nous efforçons de créer un site web qui vous ressemble et qui vous aidera à atteindre vos objectifs.
+    </p>
+</div>
+<div class="containerRaison">
+    <h3>Nous sommes à l'écoute</h3>
+    <p>
+        Nous mettons un point d'honneur à écouter attentivement les besoins de nos clients
+        et à leur offrir un site web qui répond parfaitement à leurs attentes. Nous veillons
+        à ce que la communication soit facile et agréable. Nous sommes à votre disposition pour
+        répondre à toutes vos questions et vous accompagner tout au long de la création de votre site.
+        Nous sommes convaincus que la collaboration est la clé d'un projet réussi et nous sommes impatients
+            de travailler avec vous pour le réaliser de manière simple et efficace.
+    </p>
+</div>
+<div class="containerRaison">
+    <h3>Entièrement personnalisable</h3>
+    <p>
+        Il y a plusieurs avantages à avoir un site fait sur mesure pour votre entreprise. Tout d'abord, vous
+        avez le contrôle total sur la personnalisation de votre site, vous pouvez décider de tous les éléments
+        qui y figurent, des couleurs et des polices utilisées jusqu'aux aux fonctionnalités incluses. Cela vous 
+        permet de créer un site web qui reflète exactement votre image de marque et qui répond parfaitement à vos
+        besoins spécifiques. De plus, nos sites sont conçus de manière à être facilement mis à jour et à être évolutif.
+        Cela vous permet de le modifier et de l'ajuster au fil du temps, afin de suivre les changements de votre entreprise et de vos besoins.
+    </p>
+</div>
+</div>
+
+
+.divWhy{   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.divWhy h1{
+/*     position: absolute;
+    top: 100px;
+    left: 300px; */
+    font-weight: 600;
+    font-size: 3w;
+    justify-self: flex-start;
+    margin-bottom: 120px;
+    transform: translateX(-200px);
+}
+.divWhy .containerRaison{
+    background: rgba(234, 234, 234, 0.377);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 90px;
+}
+.forme{
+    position: fixed;
+    z-index: -2;
+}
+.forme.forme1{
+    top: 200px;
+    right: 200px;
+    min-width: 75px;
+    min-height: 75px;
+    background: rgb(242, 0, 255);
+    border-radius: 50%;
+    z-index: -2;
+}
+.forme.forme1::after{
+    content: '';
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    background: rgb(242, 0, 255);
+    filter: blur(20px);
+    z-index: -2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="star">
+    <div class="contentStar">
+        <h3>Optimiser votre site pour <span class="specialWord">VOUS</span>.</h3>
+        <p>Nous comprenons que chaque projet est unique et requiert une approche personnalisée.
+            C'est pourquoi nous nous adaptons à chacun d'entre eux afin d'obtenir un résultat final plus que convaincant et 
+            totalement optimiser pour <span class="specialWord">VOTRE</span> entreprise. Nous prenons le temps de comprendre vos besoins et vos objectifs</p>
+    </div>
+</div>
+<div class="star">
+    <div class="contentStar">
+        <h3>Nous sommes à l'écoute</h3>
+        <p>Nous mettons un point d'honneur à écouter attentivement les besoins de nos clients
+            et à leur offrir un site web qui répond parfaitement à leurs attentes. Nous veillons
+            à ce que la communication soit facile et agréable. Nous sommes à votre disposition pour
+            répondre à toutes vos questions et vous accompagner tout au long de la création de votre site.
+            Nous sommes convaincus que la collaboration est la clé d'un projet réussi et nous sommes impatients
+                de travailler avec vous pour le réaliser de manière simple et efficace.</p>
+    </div>
+</div>
+<div class="star">
+    <div class="contentStar">
+        <h3>Entièrement personnalisable</h3>
+        <p>Il y a plusieurs avantages à avoir un site fait sur mesure pour votre entreprise. Tout d'abord, vous
+            avez le contrôle total sur la personnalisation de votre site, vous pouvez décider de tous les éléments
+            qui y figurent, des couleurs et des polices utilisées jusqu'aux aux fonctionnalités incluses. Cela vous 
+            permet de créer un site web qui reflète exactement votre image de marque et qui répond parfaitement à vos
+            besoins spécifiques. De plus, nos sites sont conçus de manière à être facilement mis à jour et à être évolutif.
+            Cela vous permet de le modifier et de l'ajuster au fil du temps, afin de suivre les changements de votre entreprise et de vos besoins.</p>
+    </div>
+</div>
+
+
+.sectionWhy .star{
+    padding: 50px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0 25px;
+    height: 450px;
+    min-width: 450px;
+/*     clip-path: polygon(10% 10%, 20% 20%, 80% 20%, 90% 10%, 80% 50%, 90% 90%, 80% 80%, 20% 90%); */
+}
+.sectionWhy .star .contentStar::before{
+    content: '';
+    position: absolute;
+    padding: 50px;
+    min-width: 450px;
+    min-height: 450px;
+    background: var(--main-gradient-);
+    z-index: 5000;
+    clip-path: polygon(50% 0%, 60% 20%);
+}
