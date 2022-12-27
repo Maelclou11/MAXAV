@@ -300,7 +300,7 @@ section img#mountains_front{
     transition-delay: 2s;
     transition: all 1s ease-in-out;
     transform-origin: left;
-    border-radius: 100px;
+    border-radius: 10px;
     border: 0px solid white;
 }
 @keyframes animate1 {
@@ -405,7 +405,7 @@ section img#mountains_front{
     letter-spacing: 1px;
 }
 /* #endregion */
-/*#region           POURQUOI  */
+/*#region           POURQUOI NOUS  */
 .specialWord{
     font-size: larger;
     font-weight: 600;
@@ -414,8 +414,8 @@ section img#mountains_front{
 .sectionWhy{
     z-index: -2;
     padding-left: 400px;
-    background: linear-gradient(var(--main-color-), rgb(210, 14, 232));
-/*     background: #2d2c2c; */
+/*     background: linear-gradient(var(--main-color-), rgb(210, 14, 232)); */
+    background: #2d2c2c;
     background-position: fixed;
 }
 .divWhy{   
@@ -448,8 +448,8 @@ section img#mountains_front{
 .forme.forme1{
     top: 200px;
     right: 200px;
-    min-height: 75px;
     min-width: 75px;
+    min-height: 75px;
     background: rgb(242, 0, 255);
     border-radius: 50%;
     z-index: -2;
@@ -463,6 +463,7 @@ section img#mountains_front{
     filter: blur(20px);
     z-index: -2;
 }
+
 /* #endregion */
 /*#region           BESOINSITE */
 .icon{
@@ -654,12 +655,156 @@ section img#mountains_front{
     cursor: pointer;
 }
 /* #endregion */
+/*#region           CONTACT US */
+#contactUs{     /*pour une section ne pas mettre section avant la classe sinon le css ne fait pas effet*/
+    padding: 25px;
+    width: 100%;
+    background: linear-gradient(rgb(68, 68, 68),grey 75%) ;
+}
+
+#contactUs::before{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(black,white);
+    border-radius: 50%;
+    transform: translate(-400px, -160px);
+}
+#contactUs::after{
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(white, black);
+    border-radius: 50%;
+    transform: translate(400px, 180px);
+} 
+.containerCU{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /*pour ne pas que le contenu déborde. overflow scroll pour rajouter une scrolling bar*/
+    backdrop-filter: blur(10px);
+}
+.containerCU::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    transform: skewX(-15deg); /*pour faire la barre diagonale*/
+}
+.containerCU h2{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.containerCU .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));/*faire des colonne de différente taille*/
+}
+.containerCU .row100 .colCU{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+}
+.containerCU .row100 .colCU .inputBoxCU{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+.containerCU .row100 .colCU .inputBoxCU input,
+.containerCU .row100 .colCU .inputBoxCU textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+} 
+.containerCU .row100 .colCU .inputBoxCU .textCU{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.containerCU .row100 .colCU .inputBoxCU input:focus + .textCU,
+.containerCU .row100 .colCU .inputBoxCU input:valid + .textCU,
+.containerCU .row100 .colCU .inputBoxCU textarea:focus + .textCU,
+.containerCU .row100 .colCU .inputBoxCU textarea:valid + .textCU{
+    top: -35px;
+    left: -10px;
+}
+.containerCU .row100 .colCU .inputBoxCU .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.containerCU .row100 .colCU .inputBoxCU input:focus ~ .line,
+.containerCU .row100 .colCU .inputBoxCU input:valid ~ .line{
+    height: 100%;
+}
+.containerCU .row100 .colCU .inputBoxCU.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+.containerCU .row100 .colCU .inputBoxCU textarea:focus ~ .line,
+.containerCU .row100 .colCU .inputBoxCU textarea:valid ~ .line{
+    height: 100%;
+}
+.containerCU .row100 .colCU input[type="submit"]{
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 2px;
+}
+/* #endregion */
 /*#region           FOOTER  */
 footer{
     font-family: 'Poppins',sans-serif;
     width: 100%;
     position: relative;
-    background: linear-gradient(to right, #002654, #4f0056);
+    background: linear-gradient(to right, #4f0056, #002654);
 /*     background-color: var(--main-color-hover-); */
     color: rgb(255, 255, 255);
     padding: 100px 0 0;

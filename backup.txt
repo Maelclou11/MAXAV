@@ -459,3 +459,122 @@
                 divIcon.classList.remove('normalDivNone');
                 divIcon5.classList.remove('div1On');
             }) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bubbles">
+    <span style="--w:11;"></span>
+    <span style="--w:12;"></span>
+    <span style="--w:24;"></span>
+    <span style="--w:10;"></span>
+    <span style="--w:14;"></span>
+    <span style="--w:23;"></span>
+    <span style="--w:18;"></span>
+    <span style="--w:16;"></span>
+    <span style="--w:19;"></span>
+    <span style="--w:20;"></span>
+    <span style="--w:22;"></span>
+    <span style="--w:25;"></span>
+    <span style="--w:18;"></span>
+    <span style="--w:21;"></span>
+    <span style="--w:15;"></span>
+    <span style="--w:13;"></span>
+    <span style="--w:26;"></span>
+    <span style="--w:17;"></span>
+    <span style="--w:13;"></span>
+    <span style="--w:28;"></span>
+    <span style="--w:11;"></span>
+    <span style="--w:12;"></span>
+    <span style="--w:24;"></span>
+    <span style="--w:10;"></span>
+    <span style="--w:14;"></span>
+    <span style="--w:23;"></span>
+    <span style="--w:18;"></span>
+    <span style="--w:16;"></span>
+    <span style="--w:19;"></span>
+    <span style="--w:20;"></span>
+    <span style="--w:22;"></span>
+    <span style="--w:25;"></span>
+    <span style="--w:18;"></span>
+    <span style="--w:21;"></span>
+    <span style="--w:15;"></span>
+    <span style="--w:13;"></span>
+    <span style="--w:26;"></span>
+    <span style="--w:17;"></span>
+    <span style="--w:13;"></span>
+    <span style="--w:28;"></span>
+    <span style="--w:20;"></span>
+    <span style="--w:22;"></span>
+    <span style="--w:25;"></span>
+    <span style="--w:18;"></span>
+    <span style="--w:12;"></span>
+    <span style="--w:24;"></span>
+    <span style="--w:10;"></span>
+    <span style="--w:22;"></span>
+    <span style="--w:25;"></span>
+    <span style="--w:18;"></span>
+    <span style="--w:21;"></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bubbles{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    transform: translateY(10vh);
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #bc1ec2;        /* Couleur de la bulle #1 */
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #ba1dc044,
+    0 0 50px #b81dbe,
+    0 0 100px #b21cb7;
+    animation: animateBubble 15s linear infinite;       /* 2ieme couleur de la bulle #1 (la plus grande) */
+    animation-duration: calc(100s / var(--w));
+}
+.bubbles span:nth-child(even){
+    background: rgb(86, 8, 174);        /* Couleur de la bulle #2 */
+    box-shadow: 0 0 0 10px rgba(87, 9, 177, 0.422),     /* Couleur de la bulle #2 */
+    0 0 50px rgba(82, 8, 167, 0.689),
+    0 0 100px rgba(92, 9, 186, 0.573);
+}
+@keyframes animateBubble
+{
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(0.6);
+    }
+}
