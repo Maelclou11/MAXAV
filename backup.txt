@@ -758,7 +758,7 @@
 
 
 
-
+<section class="sectionHeadline active">
 <!--             <div class="bg active">
         <div class="bgBox1 active"></div>
         <div class="bgBox2 active"></div>
@@ -784,6 +784,7 @@
         <!-- <img src="/img/logoProvisoire.jpg"> -->
         <h1>Commencer dès demain la construction de votre site web !</h1>
     </div>
+</section>
 
 
 

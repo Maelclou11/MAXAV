@@ -261,7 +261,48 @@ header.sticky .ulNav li a:hover{
 }
 /* #endregion */
 /*#region           ACCUEIL */
-
+.accueil{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: flex-start;
+    padding: 100px;
+    background: #e5e5e5;
+}
+.accueil h1{
+    font-size: 12rem;
+    font-weight: 600;
+    justify-self: flex-start;
+    color: var(--main-color-);
+}
+.accueil h3{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 5rem;
+}
+.imgParalax{
+    background: url(img/bg-main.jpg);
+    background-size: cover;
+    background-position: fixed;
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+}
+.imgParalax1 {
+    background: url(img/bg-main.jpg);
+    background-size: cover;
+    background-position: fixed;
+    position: absolute;
+    right: 350px;
+    bottom: 100px;
+    width: 200px;
+    height: 300px;
+}
 /* #endregion */
 /*#region           POURQUOI NOUS  */
 .specialWord{
