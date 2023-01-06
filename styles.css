@@ -1112,11 +1112,11 @@ hr{
         z-index: 104;
     }
     header .navigation{
-        position: absolute;
+        position: fixed;
         left: unset;
         right: 0;
-        transform: scaleY(0);
-        transform-origin: top;
+        transform: scaleX(0);
+        transform-origin: right;
         width: 50vw;
         height: 100vh;
         display: flex;
@@ -1130,7 +1130,7 @@ hr{
     }
     .navigation.active{
         right: 0;
-        transform: scaleY(1);
+        transform: scaleX(1);
     }
     .navigation .ulNav{
         flex-direction: column;
