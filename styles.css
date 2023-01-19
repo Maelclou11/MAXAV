@@ -55,8 +55,10 @@ body.explored{
     height: 200px;
     width: 200px;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transform: rotateX(-30deg);
     animation: animateLoad 4s linear infinite;
+    -webkit-animation: animateLoad 4s linear infinite;
 }
 @keyframes animateLoad
 {
@@ -76,6 +78,7 @@ body.explored{
     width: 100%;
     height: 100%;
     transform-style: preserve-3d; 
+    -webkit-transform-style: preserve-3d;
 }
 
 .cube div span{
@@ -87,6 +90,7 @@ body.explored{
     height: 100%;
     background: linear-gradient(var(--main-color-) 40%, rgba(0, 0, 255, 0.553));
     transform: rotateY(calc(90deg * var(--i))) translateZ(100px); /*150px = height .cube/2*/
+    -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
     font-size: 60px;
     justify-content: center;
     align-items: center;
@@ -104,6 +108,7 @@ body.explored{
     height: 200px;
     background: var(--main-color-hover-);
     transform: rotateX(90deg) translateZ(100px);
+    -webkit-transform: rotateX(90deg) translateZ(100px);
 }
 .top::before{
     content: '';
@@ -119,7 +124,12 @@ body.explored{
     /*0 0 200px rgba(119, 0, 255, 0.582),*/
     0 0 300px rgb(119, 0, 255, 0.6),
     /*0 0 400px rgba(119, 0, 255, 0.8),*/
-    0 0 500px rgb(119, 0, 255); 
+    0 0 500px rgb(119, 0, 255);
+    -webkit-box-shadow: 0 0 120px rgba(119, 0, 255, 0.582),        
+    /*0 0 200px rgba(119, 0, 255, 0.582),*/
+    0 0 300px rgb(119, 0, 255, 0.6),
+    /*0 0 400px rgba(119, 0, 255, 0.8),*/
+    0 0 500px rgb(119, 0, 255);
 }
 .top::after{
     content: '';
@@ -130,7 +140,7 @@ body.explored{
     height: 200px;
     background: rgba(109, 10, 222, 0.629);
     transform: translateZ(-200px);
-/*     box-shadow: 0 0 120px rgba(119, 0, 255, 0.582),          lag
+/*     box-shadow: 0 0 120px rgba(119, 0, 255, 0.582),  
     0 0 200px rgba(119, 0, 255, 0.582),
     0 0 300px rgb(119, 0, 255, 0.6),
     0 0 400px rgba(119, 0, 255, 0.8),
@@ -420,9 +430,11 @@ header.sticky .ulNav li a:hover:after{
 }
 .sectionWhy .colWhy{
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
 }
 .sectionWhy .colWhy .contentWhy{
-
+    width: 30%;
     margin: 0 10px;
     color: #fff;
 }
@@ -435,13 +447,42 @@ header.sticky .ulNav li a:hover:after{
 
 /* #endregion */
 /*#region           BESOINSITE */
+.card-container {
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+.card {
+    width: 25%; /* pour les petites cartes */
+    height: 100px;
+    float: left;
+    background-color: #6D0ADE;
+    border: 2px solid #000;
+    order: 1;
+    transition: none;
+}
+.large {
+    top: 0;
+    left: 38%;
+    position: absolute;
+    order: 0;
+    transform: scaleX(300%);
+    background-color: #4f0056; /* pour la grande carte */
+    transition: all 0.5s ease-in-out;
+}
+.large h1{
+    transform: scaleX(33%);
+}
 .sectionBSite{
     padding: 100px 100px 80px 100px;
     background: #e5e5e5;
-    height: 100vh;
     width: 100vw;
-    max-width: 100vw;
+    height: 100vh;
 }
+
 .sectionBSite .h1Icon{
     position: absolute;
     top: 10%;
@@ -458,7 +499,7 @@ header.sticky .ulNav li a:hover:after{
 .bSiteAll{
     top: 20%;
     position: absolute;
-    height: 30vh;
+    height: 45vh;
     width: 80%;
     padding: 0px;
     margin: 10px;
@@ -470,8 +511,13 @@ header.sticky .ulNav li a:hover:after{
     transform: translateY(50%);
     display: flex;
 }
+.bSiteAll.div1On{
+    border: 3px solid black;
+    display: flex;
+    padding: 3vw;
+}
 .sectionBSite .bSiteAll h1{
-    font-size: 40px;
+    font-size: calc(10px + 2vw);
     font-family: 'Poppins';
     font-weight: 800;
     background-image: var(--main-gradient-);
@@ -482,17 +528,22 @@ header.sticky .ulNav li a:hover:after{
     transition-delay: 0.2s;
 }
 .sectionBSite .bSiteAll .imgBox{
-    width: 40%;
-    height: 30vh;
     display: flex;
+    justify-content: space-around;
+    width: 20vw;
+    height: 20vw;
 }
 .sectionBSite .bSiteAll .imgBox img{
     position: relative;
 }
 .sectionBSite .bSiteAll p{
-    font-size: 24px;
+    position: relative;
+    font-size: calc(5px + 1.5vw);
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+}
+.sectionBSite .contentBox {
+    width: 50%;
 }
 .bSiteAll h1,
 .bSiteAll h3,
@@ -502,7 +553,6 @@ header.sticky .ulNav li a:hover:after{
     transition: all 0.5s ease-in-out;
     transition-delay: 0.2s;
 }
-
 .sectionBSite .bSite{
     top: 20%;
     position: absolute;
@@ -1063,34 +1113,81 @@ hr{
 
 
 
-
-/*#region    ENTERING UNDER 1200PX */
-@media screen and (max-width: 1200px){
-    .navigation{
-        padding: 15px 30px;
+/*#region    ENTERING UNDER 500PX */
+@media screen and (max-width: 500px){
+    .sectionWhy{
+        padding: 20px 40px 180px 20px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 85%);
     }
-    .ulNav li a{
-        font-size: 16.5px;
-        padding: 10px 5px;
+    .sectionBSite .h1Icon{
+        text-align: center;
+        font-size: 24px;
     }
     .sectionBSite ul li{
-        margin: 0px 40px;
+        font-size: 25px;
+        line-height: unset;
+        padding-top: 3px;
+        margin: 25px 25px;
+    }
+    .colWhy {
+        margin-bottom: 4rem;
     }
 }
 /* #endregion */
-/*#region    ENTERING UNDER 1000PX */
-@media screen and (max-width: 1070px){
-    .sectionWhy{
-        padding: 15px 40px;
+/*#region    ENTERING UNDER 650PX */
+@media screen and (max-width: 650px){
+    .sectionWhy .titleWhy{
+        text-align: center;
+        font-size: 50px;
     }
-    .ulNav li a{
-        height: 4rem;
-        display: flex;
-        align-items: center;
+    .sectionWhy .colWhy{
+        flex-direction: column;
+        text-align: center;
     }
-    .logo{
-        font-size: 34px !important;
+    .sectionWhy .colWhy .contentWhy{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .sectionWhy::after{
+        right: -50px;
+    }
+    .bSiteAll .imgBox{
+        width: 0;
+    }
+    .bSiteAll .imgBox img{
+        display: none;
+    }
+    .accueil{
+        padding: 40px;
+    }
+    .accueil h1{
+        font-size: 6rem;
+    }
+    .accueil h3 {
+        font-size: 2rem;
+    }
+    .imgParalax1 {
+        bottom: 30%;
+    }
+    .accueil .contentAccueil{
+        max-width: 100%;
+        text-align: center;
+    }
+    .accueil .contentAccueil h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .accueil .contentAccueil p{
+        font-size: 25px;
+    }
+    .accueil .boutonContainer{
+        text-align: center;
+        flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+    .accueil .boutonContainer a{
+        margin: 10px 0 10px 0;
     }
 }
 /* #endregion */
@@ -1177,7 +1274,7 @@ hr{
         font-size: 30px;
     }
     .sectionWhy{
-        padding-bottom: 110px;
+        padding: 15px 40px 100px 40px !important;
     }
     .sectionWhy::after{
         right: -200px;
@@ -1204,74 +1301,38 @@ hr{
     }
 }
 /* #endregion */
-/*#region    ENTERING UNDER 650PX */
-@media screen and (max-width: 650px){
-    .sectionWhy .titleWhy{
-        text-align: center;
-        font-size: 50px;
+/*#region    ENTERING UNDER 1070PX */
+@media screen and (max-width: 1070px){
+    .sectionWhy{
+        padding: 15px 40px 70px 40px;
     }
-    .sectionWhy .colWhy{
-        flex-direction: column;
-        text-align: center;
-    }
-    .sectionWhy::after{
-        right: -50px;
-    }
-    .bSiteAll .imgBox{
-        width: 0;
-    }
-    .bSiteAll .imgBox img{
-        display: none;
-    }
-    .accueil{
-        padding: 40px;
-    }
-    .accueil h1{
-        font-size: 6rem;
-    }
-    .accueil h3 {
-        font-size: 2rem;
-    }
-    .imgParalax1 {
-        bottom: 30%;
-    }
-    .accueil .contentAccueil{
-        max-width: 100%;
-        text-align: center;
-    }
-    .accueil .contentAccueil h1{
-        font-size: 50px;
-        line-height: 60px;
-    }
-    .accueil .contentAccueil p{
-        font-size: 25px;
-    }
-    .accueil .boutonContainer{
-        text-align: center;
-        flex-direction: column;
+    .ulNav li a{
+        height: 4rem;
+        display: flex;
         align-items: center;
-        width: 100%;
     }
-    .accueil .boutonContainer a{
-        margin: 10px 0 10px 0;
+    .logo{
+        font-size: 34px !important;
+        align-items: center;
+    }
+    .bSiteAll{
+        height: 30vh;
     }
 }
+
 /* #endregion */
-/*#region    ENTERING UNDER 500PX */
-@media screen and (max-width: 500px){
-    .sectionWhy{
-        padding: 20px 40px 180px 20px;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 85%);
+/*#region    ENTERING UNDER 1200PX */
+@media screen and (max-width: 1200px){
+    .navigation{
+        padding: 15px 30px;
     }
-    .sectionBSite .h1Icon{
-        text-align: center;
-        font-size: 24px;
+    .ulNav li a{
+        font-size: 16.5px;
+        padding: 10px 5px;
     }
     .sectionBSite ul li{
-        font-size: 25px;
-        line-height: unset;
-        padding-top: 3px;
-        margin: 25px 25px;
+        margin: 0px 40px;
     }
 }
 /* #endregion */
+

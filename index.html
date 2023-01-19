@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="styles.css">
         <!-- <link rel="stylesheet" href="../CSS/color1.css"> -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!--         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
         
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -87,21 +87,17 @@
                         <h3>Optimiser votre site pour <span class="specialWord">VOUS</span>.</h3>
                         <p>Nous comprenons que chaque projet est unique et requiert une approche personnalisée.
                             C'est pourquoi nous nous adaptons à chacun d'entre eux afin d'obtenir un résultat final plus que convaincant et 
-                            totalement optimiser pour <span class="specialWord">VOTRE</span> entreprise. Nous prenons le temps de comprendre vos besoins et vos objectifs</p>
+                            totalement l'optimiser pour <span class="specialWord">VOTRE</span> entreprise.</p>
                     </div>
     
                     <div class="contentWhy">
-                        <h3>Nous sommes à l'écoute</h3>
-                        <p>Nous mettons un point d'honneur à écouter attentivement les besoins de nos clients
-                            et à leur offrir un site web qui répond parfaitement à leurs attentes. Nous veillons
-                            à ce que la communication soit facile et agréable. Nous sommes à votre disposition pour</p>
+                        <h3>Nous sommes à <span class="specialWord">VOTRE</span> écoute</h3>
+                        <p>Nous écoutons attentivement les besoins de nos clients, pour offrir un site web qui répond à leurs attentes et nous communiquerons facilement pour répondre à toutes vos questions en vous accompagnant pendant la création afin d'obtenir un résultat concluant !</p>
                     </div>
     
                     <div class="contentWhy">
-                        <h3>Entièrement personnalisable</h3>
-                        <p>Il y a plusieurs avantages à avoir un site fait sur mesure pour votre entreprise. Tout d'abord, vous
-                            avez le contrôle total sur la personnalisation de votre site, vous pouvez décider de tous les éléments
-                            qui y figurent, des couleurs et des polices utilisées jusqu'aux aux fonctionnalités incluses.</p>
+                        <h3><span class="specialWord">VOS</span> Idées, <span class="specialWord">NOS</span> compétences</h3>
+                        <p>Un site web sur mesure vous permet une personnalisation complète du site, de la police d'écriture aux fonctionnalités. Cela assure qu'il reflète l'image de votre entreprise et, est évolutif pour suivre les futurs changements de celle-ci.</p>
                     </div>
                 </div>
             </section>
@@ -109,7 +105,16 @@
         <!-- #endregion -->
         <!--#region         BESOINSITE -->
         <section class="sectionBSite">
-            <h1 class="h1Icon">Quelles avantages à avoir un site ?</h1>
+           <!-- <div class="card-container">
+                <div class="card large">
+                    <h1>Large Card</h1>
+                </div>
+                <div class="card small">Small Card 1</div>
+                <div class="card small">Small Card 2</div>
+                <div class="card small">Small Card 3</div>
+                <div class="card small">Small Card 4</div>
+              </div> -->
+             <h1 class="h1Icon">Quelles avantages à avoir un site ?</h1>
             <div class="bSite">
                 <h1>Un site web pour VOTRE entreprise</h1>
                 <h3>Qui reflète VOS valeur</h3> 
@@ -166,7 +171,7 @@
                         <i class="fa-solid fa-5"></i>
                     </li>
                 </ul>
-            </div>
+            </div> 
         </section>
         <!-- #endregion -->
         <!--#region         CONTACT US -->
@@ -236,7 +241,7 @@
                     <div class="colFooter">
                         <h3>Adresse<div class="underline"></div></h3>
                         <p>230 2e Avenue</p>
-                        <p>Canada, Québéc</p>
+                        <p>Canada, Québec</p>
                         <p>Lambton, G0M 1H0</p>
                         <p class="email-id">mxbservice@hotmail.com</p>
                         <a class="mobileFooter">1 + 819-214-6320</a>
@@ -395,6 +400,19 @@
                 isActive = divIcon5;
                 oneIsActive = true;
             })
+        </script>
+        <script>
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+            card.addEventListener('click', e => {
+                const currentCard = e.currentTarget;
+                const largeCard = document.querySelector('.large');
+
+                currentCard.classList.toggle('large');
+                largeCard.classList.toggle('large');
+            });
+            });
         </script>
         <!-- #endregion -->
     </body>
