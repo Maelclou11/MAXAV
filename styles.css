@@ -447,6 +447,83 @@ header.sticky .ulNav li a:hover:after{
 
 /* #endregion */
 /*#region           BESOINSITE */
+section.sectionBSite{
+    width: auto;
+    height: auto;
+}
+.sectionBSite .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sectionBSite .container .carte{
+    /*background-image: url(./img/carte.jpg);*/
+    background-size: cover;
+    padding: 10vh 10vw;
+    width: 20vw;
+    height: 20vw;
+    min-width: 20vh;
+    min-height: 20vh;
+    margin: 2vw;
+    border: 2px solid var(--main-color-hover-);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    background-color: var(--main-color-);
+}
+.sectionBSite .container .carte .recto{
+    position: absolute;
+    transition: all 0.5s ease-in-out 1s;
+    color: var(--secondary-color-);
+    
+}
+.sectionBSite .container .carte .verso{
+    position: absolute;
+    opacity: 0%;
+    transform: rotateY(180deg);
+    transition: all 0.5s ease-in-out 0s;
+    color: var(--secondary-color-);   
+}
+.sectionBSite .container .carte.click{
+    transform: rotateY(180deg);
+}
+.sectionBSite .container .carte.click .verso{
+    transition-delay: 1s;
+    opacity: 100%;
+}
+.sectionBSite .container .carte.click .recto{
+    transition-delay: 0s;
+    opacity: 0%;
+}
+/*.sectionBSite .container .carte .recto::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -400%;
+    left: 20%;
+    background: yellow;
+    z-index: 1;
+    align-self: center;
+    border-radius: 100%;
+}
+.sectionBSite .container .carte .verso::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -400%;
+    left: 20%;
+    background: yellow;
+    z-index: 1;
+    align-self: center;
+    border-radius: 100%;
+    animation: growIn 10s ease;
+}*/
+
 .card-container {
     width: 60%;
     height: 40vh;
