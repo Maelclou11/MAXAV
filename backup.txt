@@ -969,3 +969,273 @@ section img#mountains_front{
     color: #fff;
     letter-spacing: 1px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.sectionBSite .container .carte .recto::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -400%;
+    left: 20%;
+    background: yellow;
+    z-index: 1;
+    align-self: center;
+    border-radius: 100%;
+}
+.sectionBSite .container .carte .verso::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -400%;
+    left: 20%;
+    background: yellow;
+    z-index: 1;
+    align-self: center;
+    border-radius: 100%;
+    animation: growIn 10s ease;
+}*/
+
+.card-container {
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+.card {
+    width: 25%; /* pour les petites cartes */
+    height: 100px;
+    float: left;
+    background-color: #6D0ADE;
+    border: 2px solid #000;
+    order: 1;
+    transition: none;
+}
+.large {
+    top: 0;
+    left: 38%;
+    position: absolute;
+    order: 0;
+    transform: scaleX(300%);
+    background-color: #4f0056; /* pour la grande carte */
+    transition: all 0.5s ease-in-out;
+}
+.large h1{
+    transform: scaleX(33%);
+}
+.sectionBSite{
+    padding: 100px 100px 80px 100px;
+    background: #e5e5e5;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sectionBSite .h1Icon{
+    position: absolute;
+    top: 10%;
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    background-image: var(--main-gradient-);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+    padding: 0 20px;
+}
+.bSiteAll{
+    top: 20%;
+    position: absolute;
+    height: 45vh;
+    width: 80%;
+    padding: 0px;
+    margin: 10px;
+    vertical-align: top;
+    align-items:center;
+    justify-content: space-evenly;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    transform: translateY(50%);
+    display: flex;
+}
+.bSiteAll.div1On{
+    border: 3px solid black;
+    display: flex;
+    padding: 3vw;
+}
+.sectionBSite .bSiteAll h1{
+    font-size: calc(10px + 2vw);
+    font-family: 'Poppins';
+    font-weight: 800;
+    background-image: var(--main-gradient-);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+}
+.sectionBSite .bSiteAll .imgBox{
+    display: flex;
+    justify-content: space-around;
+    width: 20vw;
+    height: 20vw;
+}
+.sectionBSite .bSiteAll .imgBox img{
+    position: relative;
+}
+.sectionBSite .bSiteAll p{
+    position: relative;
+    font-size: calc(5px + 1.5vw);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.sectionBSite .contentBox {
+    width: 50%;
+}
+.bSiteAll h1,
+.bSiteAll h3,
+.bSiteAll p,
+.bSiteAll .imgBox{
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+}
+.sectionBSite .bSite{
+    top: 20%;
+    position: absolute;
+    height: 30vh;
+    width: 100%;
+    padding: 0px;
+    margin: 10px;
+    vertical-align: top;
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    padding-left: 13%;
+    transition: all 0.5s ease-in-out;
+}
+.sectionBSite .bSite h1{
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    background-image: var(--main-gradient-);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+.sectionBSite .bSite.normalDivNone{
+    opacity: 0;
+}
+.sectionBSite .bSite1.div1On{
+    transform: translateY(0);
+}
+.sectionBSite .bSite1.div1On h1,
+.sectionBSite .bSite1.div1On h3,
+.sectionBSite .bSite1.div1On p,
+.sectionBSite .bSite1.div1On .imgBox{
+    opacity: 1;
+}
+.sectionBSite .bSite2.div1On{
+    transform: translateY(0);
+}
+.sectionBSite .bSite2.div1On h1,
+.sectionBSite .bSite2.div1On h3,
+.sectionBSite .bSite2.div1On p{
+    opacity: 1;
+}
+.sectionBSite .bSite3.div1On{
+    transform: translateY(0);
+}
+.sectionBSite .bSite3.div1On h1,
+.sectionBSite .bSite3.div1On h3,
+.sectionBSite .bSite3.div1On p{
+    opacity: 1;
+}
+.sectionBSite .bSite4.div1On{
+    transform: translateY(0);
+}
+.sectionBSite .bSite4.div1On h1,
+.sectionBSite .bSite4.div1On h3,
+.sectionBSite .bSite4.div1On p{
+    opacity: 1;
+}
+.sectionBSite .bSite5.div1On{
+    transform: translateY(0);
+}
+.sectionBSite .bSite5.div1On h1,
+.sectionBSite .bSite5.div1On h3,
+.sectionBSite .bSite5.div1On p{
+    opacity: 1;
+}
+.sectionBSite ul{
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+.sectionBSite ul li {
+    list-style: none;
+    margin: 0 80px;
+    font-size: 40px;
+    color: white;
+    line-height: 80px;
+    transition: .5s;
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 80px;
+    /* background: var(--main-gradient-); */
+    background: var(--main-color-hover-);
+    text-align: center;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+    transition: .5s;
+ 
+}   
+.sectionBSite ul li:before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: rgb(49, 0, 72);
+    transition: .5s;
+    transform: rotate(0deg) skewY(-45deg);
+    border: 1px solid #fff;
+}
+.sectionBSite ul li:after{
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: rgb(49, 0, 72);
+    transition: .5s;
+    transform: rotate(0deg) skewX(-45deg);
+    border: 1px solid #fff;
+}
+.sectionBSite ul li:hover{
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+    box-shadow: -50px 50px 50px rgba(76, 4, 178, 0.5);
+    cursor: pointer;
+}
