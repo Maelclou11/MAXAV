@@ -394,7 +394,7 @@ header.sticky .ulNav li a:hover:after{
     background-position: fixed;
     display: flex;
     flex-direction: column;
-    padding: 40px 100px 100px 100px;
+    padding: 20px 100px 20px 100px;
     z-index: 1;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
     justify-content: center;
@@ -446,112 +446,94 @@ header.sticky .ulNav li a:hover:after{
 }
 
 /* #endregion */
-/*#region           BESOINSITE */
-.sectionBSite{
-    height: auto;
-    width: 100%;
+/*#region           Points */
+#points{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: var(--color-light-grey-);
 }
-.sectionBSite h2{
-    font-size: calc(1rem + 0.75vmin);
-    color: #fff;
-    margin-bottom: 1.5rem;
-    width: 80%;
-}
-.sectionBSite p{
-    font-size: calc(0.7rem + 0.4vmin);
-    letter-spacing: 1px;
-    line-height: 2;
-    color: #fff;
-    width: 90%;
-}
-.sectionBSite .main{
+#points .container{
+    display: flex;
+    margin: calc(2rem + 1vh) 0;
+    position: relative;
     width: 100%;
-    height: auto;
+}
+#points .container.haut{
+    justify-content: flex-end;
+}
+#points .carte{
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    width: 70%;
+    padding: calc(1rem + 1vmin);
+    z-index: 2;
+    border: 1px solid black;
 }
-.sectionBSite .haut{
-    display: flex;
-    flex-direction: row;
-    justify-content: baseline;
-    width: 100%;
-    margin: 10vh 0 5vh;
-}
-.sectionBSite .bas{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    margin: 5vh 0 10vh;
-}
-.sectionBSite .img{
-    height: 50%;
-    width: 60%;
-    box-shadow: 1px 1px 5px 1px rgba(85, 22, 144, 0.449);
-}
-.sectionBSite .haut .img{
-    background-color: var(--main-color-hover-);
-}
-.sectionBSite .bas .img{
-    background-color: var(--main-color-);
-}
-.sectionBSite .contentBas .img{
+#points .haut .carte{
     align-self: flex-end;
-    transform: translateX(5vw);
+    border-radius: 40px 0px 0px 40px;
+    border-right: 0px;
 }
-.sectionBSite .carte{
-    width: 60%;
-    padding: 10vh 0;
+#points .bas .carte{
+    border-radius: 0px 40px 40px 0px;
 }
-.sectionBSite .haut .carte{
+#points h2{
+    color: var(--main-color-);
+    margin: calc(0.5rem + 0.25vh) calc(1rem + 0.5vh);
+}
+#points p{
+    color: var(--main-color-);
+    margin: calc(0.5rem + 0.25vh) calc(1rem + 0.5vh);
+}
+#points .bandes{
+    position: absolute;
+    border-radius: 40px;
+    transition: 0.7s all ease-in-out;
+    border: 1px solid black;
+}
+#points .bande-1{
+    top: 10%;
+}
+#points .haut .bande-1{
+    width: 90%;
+    height: 20%;
+    background-color: rgb(197 147 255);
+}
+#points .bas .bande-1{
+    width: 90%;
+    height: 25%;
     background-color: var(--main-color-);
 }
-.sectionBSite .bas .carte{
-    background-color: var(--main-color-hover-);
+#points .haut .bande-2{
+    width: 85%;
+    height: 30%;
+    background-color: var(--main-color-);
+    top: 40%;
 }
-.sectionBSite .main .haut .carte{
-    border-radius: 0px 30px 30px 0px;
+#points .bas .bande-2{
+    width: 80%;
+    height: 15%;
+    background-color: rgb(197 147 255);
+    top: 45%;
 }
-.sectionBSite .main .bas .carte{
-    border-radius: 30px 0px 0px 30px;
+#points .haut .bande-3{
+    width: 95%;
+    height: 10%;
+    background-color: rgb(57, 6, 115) ;
+    top: 80%;
 }
-.sectionBSite .carte .contentHaut{
-    height: 50%;
-    display: flex; 
-    justify-content: flex-end;
-    margin-bottom: calc(0.25rem + 0.5vw);
+#points .bas .bande-3{
+    width: 90%;
+    height: 20%;
+    background-color: rgb(57, 6, 115);
+    top: 70%;
 }
-.sectionBSite .carte .contentHaut .left{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: calc(1rem + 1vw);
+#points .bandes:hover{
+    transform: translateX(5%);
 }
-.sectionBSite .carte .contentHaut .right{
-    display: flex;
-    flex-direction: column;
-    margin-right: calc(1rem + 1vw);
-    width: 60%;
-}
-.sectionBSite .carte .contentBas{
-    height: 50%;
-    display: flex;
-    margin: calc(0.25rem + 0.5vw) 0 calc(0.25rem + 0.5vw) calc(1rem + 1vw);
-}
-.sectionBSite .carte .contentBas .right{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.sectionBSite .carte .contentBas .left{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-}
+
 /* #endregion */
 /*#region           TARIFS  */
 .sectionBSite .tarif .tarif__content {
@@ -681,26 +663,26 @@ section#faq .faq__content a {
     justify-content: center;
 }
 
-#contactUs::before{     /*Ball de gauche*/
+/*#contactUs::before{     Ball de gauche
     content: '';
     position: absolute;
     width: 400px;
     height: 400px;
-/*     background: linear-gradient(rgb(79, 0, 86),#ccc); */
+    background: linear-gradient(rgb(79, 0, 86),#ccc); 
     background: var(--main-color-);
     border-radius: 50%;
     transform: translate(-500px, -160px);
-}
-#contactUs::after{      /*Ball de droite*/
+}*/
+/*#contactUs::after{      
     content: '';
     position: absolute;
     width: 350px;
     height: 350px;
-    /* background: linear-gradient(#ccc,#002654); */
+    background: linear-gradient(#ccc,#002654); 
     background: var(--main-color-hover-);
     border-radius: 50%;
     transform: translate(600px, 180px);
-} 
+} */
 .containerCU{
     position: relative;
     z-index: 10;

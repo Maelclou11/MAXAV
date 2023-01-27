@@ -1239,3 +1239,168 @@ section img#mountains_front{
     box-shadow: -50px 50px 50px rgba(76, 4, 178, 0.5);
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--<div class="haut">
+                    <div class="carte">
+                        <div class="contentHaut">
+                            <div class="left">
+                                <div class="img"></div>
+                            </div>
+                            <div class="right">
+                                <h2>Transférez votre activitée professionnelle en ligne</h2>
+                                <p>Un site web permet à votre entreprise d'être visible sur internet, ce qui peut être particulièrement utile si vous souhaitez atteindre de nouveaux clients.</p>
+                            </div>
+                        </div>
+                        <div class="contentBas">
+                            <div class="left">
+                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempore ipsum odit! Rerum incidunt voluptates inventore ipsa. Commodi exercitationem dolore,</p>
+                            </div>
+                            <div class="right">
+                                <div class="img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!--<div class="bas">
+                    <div class="carte">
+                        <div class="contentBas">
+                            <div class="left ">
+                                <h2>Transférez votre activité professionnel en ligne</h2>
+                                <p>un site web permet à votre entreprise d'être visible sur internet, ce qui peut être particulièrement utile si vous souhaitez atteindre de nouveaux clients.</p>
+                            </div>
+                            <div class="right">
+                                <div class="img"></div>
+                            </div>
+                        </div>
+                         <div class="contentHaut ">
+                            <div class="left">
+                                <div class="img"></div>
+                            </div>
+                            <div class="right">
+                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempore ipsum odit! Rerum incidunt voluptates inventore ipsa. Commodi exercitationem dolore,</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+.sectionBSite{
+    height: auto;
+    width: 100%;
+    display: flex;
+    background-color: var(--color-light-grey-);
+}
+.sectionBSite h2{
+    font-size: calc(1rem + 0.75vmin);
+    color: #fff;
+    margin-bottom: 1.5rem;
+    width: 80%;
+}
+.sectionBSite p{
+    font-size: calc(0.7rem + 0.4vmin);
+    letter-spacing: 1px;
+    line-height: 2;
+    color: #fff;
+    width: 90%;
+}
+.sectionBSite .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.sectionBSite .haut{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    width: 100%;
+    margin: 10vh 0 5vh;
+}
+.sectionBSite .bas{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 5vh 0 10vh;
+}
+.sectionBSite .img{
+    height: 50%;
+    width: 60%;
+    box-shadow: 1px 1px 5px 1px rgba(85, 22, 144, 0.449);
+}
+.sectionBSite .haut .img{
+    background-color: var(--main-color-hover-);
+}
+.sectionBSite .bas .img{
+    background-color: var(--main-color-);
+}
+.sectionBSite .contentBas .img{
+    align-self: flex-end;
+    transform: translateX(5vw);
+}
+.sectionBSite .carte{
+    width: 60%;
+    padding: 10vh 0;
+}
+.sectionBSite .haut .carte{
+    background-color: var(--main-color-);
+}
+.sectionBSite .bas .carte{
+    background-color: var(--main-color-hover-);
+}
+.sectionBSite .main .haut .carte{
+    border-radius: 0px 30px 30px 0px;
+}
+.sectionBSite .main .bas .carte{
+    border-radius: 30px 0px 0px 30px;
+}
+.sectionBSite .carte .contentHaut{
+    height: 50%;
+    display: flex; 
+    justify-content: flex-end;
+    margin-bottom: calc(0.25rem + 0.5vw);
+}
+.sectionBSite .carte .contentHaut .left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: calc(1rem + 1vw);
+}
+.sectionBSite .carte .contentHaut .right{
+    display: flex;
+    flex-direction: column;
+    margin-right: calc(1rem + 1vw);
+    width: 60%;
+}
+.sectionBSite .carte .contentBas{
+    height: 50%;
+    display: flex;
+    margin: calc(0.25rem + 0.5vw) 0 calc(0.25rem + 0.5vw) calc(1rem + 1vw);
+}
+.sectionBSite .carte .contentBas .right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sectionBSite .carte .contentBas .left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
