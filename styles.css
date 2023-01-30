@@ -46,6 +46,9 @@ body.explored {
   position: fixed;
   z-index: 100000; /*  Z-INDEX ABUSIF ATTENTION PEUT ETRE LA CAUSE DE BIEN DES PROBLEMES !!!  */
 }
+.loading.hidden {
+  z-index: -1000;
+}
 .cube {
   position: relative;
   height: 200px;
@@ -461,15 +464,43 @@ header.sticky .ulNav li a:hover:after {
 }
 #points .container.haut {
   justify-content: flex-end;
+  padding-left: 5rem;
+  align-items: center;
+}
+#points .container.haut .imgBox {
+  width: 30%;
+  height: 30%;
+  margin-right: auto;
+}
+#points .container.haut .imgBox img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#points .container.bas {
+  padding-right: 5rem;
+  align-items: center;
+}
+#points .container.bas .imgBox {
+  width: 30%;
+  height: 30%;
+  margin-left: auto;
+}
+#points .container.bas .imgBox img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 #points .carte {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  width: 70%;
+  background-color: var(--main-color-hover-);
+  /* width: 70%; */
+  width: 50%;
   padding: calc(1rem + 1vmin);
   z-index: 2;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 #points .haut .carte {
   align-self: flex-end;
@@ -480,52 +511,60 @@ header.sticky .ulNav li a:hover:after {
   border-radius: 0px 40px 40px 0px;
 }
 #points h2 {
-  color: var(--main-color-);
+  /* color: var(--main-color-); */
+  color: white;
   margin: calc(0.5rem + 0.25vh) calc(1rem + 0.5vh);
 }
 #points p {
-  color: var(--main-color-);
+  /* color: var(--main-color-); */
+  color: white;
   margin: calc(0.5rem + 0.25vh) calc(1rem + 0.5vh);
 }
 #points .bandes {
   position: absolute;
   border-radius: 40px;
   transition: 0.7s all ease-in-out;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 #points .bande-1 {
   top: 10%;
 }
 #points .haut .bande-1 {
-  width: 90%;
+  /* width: 90%; */
+  width: 60%;
   height: 20%;
   background-color: rgb(197 147 255);
 }
 #points .bas .bande-1 {
-  width: 90%;
+  /* width: 90%; */
+  width: 60%;
   height: 25%;
   background-color: var(--main-color-);
 }
 #points .haut .bande-2 {
-  width: 85%;
+  /* width: 85%; */
+  width: 55%;
   height: 30%;
   background-color: var(--main-color-);
   top: 40%;
 }
 #points .bas .bande-2 {
-  width: 80%;
+  /* width: 80%; */
+  width: 55%;
   height: 15%;
   background-color: rgb(197 147 255);
   top: 45%;
 }
 #points .haut .bande-3 {
-  width: 95%;
+  /* width: 95%; */
+  width: 62%;
   height: 10%;
   background-color: rgb(57, 6, 115);
   top: 80%;
 }
 #points .bas .bande-3 {
-  width: 90%;
+  /* width: 90%; */
+  width: 54%;
   height: 20%;
   background-color: rgb(57, 6, 115);
   top: 70%;
@@ -610,6 +649,8 @@ header.sticky .ulNav li a:hover:after {
 }
 .container__faq h1 {
   color: var(--main-color-hover-);
+  font-size: calc(1rem + 1vw);
+  margin-bottom: 1rem;
 }
 .container__faq .faq--tab {
   position: relative;
@@ -682,9 +723,11 @@ header.sticky .ulNav li a:hover:after {
   font-weight: 500;
   color: #fff;
   z-index: 10;
+  margin-bottom: 1rem;
 }
 .container__faq .faq--tab input:checked ~ .faq--content p {
   color: #fff;
+  margin-left: 1rem;
 }
 .container__faq .faq--tab .faq--content {
   max-height: 0;
@@ -701,7 +744,6 @@ header.sticky .ulNav li a:hover:after {
   z-index: 10;
 }
 /* #endregion */
-
 /*#region           CONTACT US */
 #contactUs {
   /*pour une section ne pas mettre section avant la classe sinon le css ne fait pas effet*/
@@ -1140,84 +1182,51 @@ hr {
 }
 /* #endregion */
 
-/*#region    ENTERING UNDER 500PX */
-@media screen and (max-width: 500px) {
-  .sectionWhy {
-    padding: 20px 40px 180px 20px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 85%);
-  }
-  .sectionBSite .h1Icon {
-    text-align: center;
-    font-size: 24px;
-  }
-  .sectionBSite ul li {
-    font-size: 25px;
-    line-height: unset;
-    padding-top: 3px;
-    margin: 25px 25px;
-  }
-  .colWhy {
-    margin-bottom: 4rem;
-  }
-  .container__faq {
-    padding: 2rem;
-  }
-  .container__faq .faq--tab label::after {
-    right: 10px;
-    top: 0;
+/*#region    ENTERING UNDER 1500px  */
+@media screen and (min-width: 1500px) {
+  .faq__content .questions {
+    padding: 1rem 3rem 1rem 6rem;
   }
 }
 /* #endregion */
-/*#region    ENTERING UNDER 650PX */
-@media screen and (max-width: 650px) {
-  .sectionWhy .titleWhy {
-    text-align: center;
-    font-size: 50px;
+/*#region    ENTERING UNDER 1200PX */
+@media screen and (max-width: 1200px) {
+  .navigation {
+    padding: 15px 30px;
   }
-  .sectionWhy .colWhy {
-    flex-direction: column;
-    text-align: center;
+  .ulNav li a {
+    font-size: 16.5px;
+    padding: 10px 5px;
   }
-  .sectionWhy .colWhy .contentWhy {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  .sectionWhy::after {
-    right: -50px;
-  }
-  .accueil {
-    padding: 100px 40px 70px 40px;
-  }
-  .accueil h1 {
-    font-size: 6rem;
-  }
-  .accueil h3 {
-    font-size: 2rem;
-  }
-  .imgParalax1 {
-    bottom: 30%;
-  }
-  .accueil .contentAccueil {
-    max-width: 100%;
-    text-align: center;
-  }
-  .accueil .contentAccueil h1 {
-    font-size: 50px;
-    line-height: 60px;
-  }
-  .accueil .contentAccueil p {
-    font-size: 25px;
-  }
-  .accueil .boutonContainer {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .accueil .boutonContainer a {
-    margin: 10px 0 10px 0;
+  section#faq .faq__content .questions {
+    padding: 0.3rem 1.5rem 0.5rem 1rem !important;
   }
 }
+/* #endregion */
+/*#region    ENTERING UNDER 1070PX */
+@media screen and (max-width: 1070px) {
+  .sectionWhy {
+    padding: 15px 40px 70px 40px;
+  }
+  .ulNav li a {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    font-size: 34px !important;
+    align-items: center;
+  }
+  #points .container.haut .imgBox {
+    position: absolute;
+    display: none;
+  }
+  #points .container.bas .imgBox {
+    display: none;
+    position: absolute;
+  }
+}
+
 /* #endregion */
 /*#region    ENTERING UNDER 850PX  */
 @media screen and (max-width: 850px) {
@@ -1274,7 +1283,7 @@ hr {
     clip-path: polygon(0% 2%, 25% 0%, 100% 3%, 100% 100%, 0% 100%);
   }
   .sectionWhy {
-    padding: 15px 40px 100px 40px !important;
+    padding: 15px 40px 100px 40px;
   }
   .sectionWhy::after {
     right: -200px;
@@ -1287,42 +1296,129 @@ hr {
     margin: 0 0 0 0;
     justify-content: space-around;
   }
+  #points .carte {
+    width: 80%;
+  }
+  #points .haut .bande-1 {
+    width: 92%;
+  }
+  #points .bas .bande-1 {
+    width: 95%;
+  }
+  #points .haut .bande-2 {
+    /* width: 85%; */
+    width: 85%;
+  }
+  #points .bas .bande-2 {
+    /* width: 80%; */
+    width: 80%;
+  }
+  #points .haut .bande-3 {
+    /* width: 95%; */
+    width: 95%;
+  }
+  #points .bas .bande-3 {
+    /* width: 90%; */
+    width: 90%;
+  }
 }
 /* #endregion */
-/*#region    ENTERING UNDER 1070PX */
-@media screen and (max-width: 1070px) {
+/*#region    ENTERING UNDER 650PX */
+@media screen and (max-width: 650px) {
+  .sectionWhy .titleWhy {
+    text-align: center;
+    font-size: 50px;
+  }
+  .sectionWhy .colWhy {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sectionWhy .colWhy .contentWhy {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .sectionWhy::after {
+    right: -50px;
+  }
+  .accueil {
+    padding: 100px 40px 70px 40px;
+  }
+  .accueil h1 {
+    font-size: 6rem;
+  }
+  .accueil h3 {
+    font-size: 2rem;
+  }
+  .imgParalax1 {
+    bottom: 30%;
+  }
+  .accueil .contentAccueil {
+    max-width: 100%;
+    text-align: center;
+  }
+  .accueil .contentAccueil h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .accueil .contentAccueil p {
+    font-size: 25px;
+  }
+  .accueil .boutonContainer {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .accueil .boutonContainer a {
+    margin: 10px 0 10px 0;
+  }
+}
+/* #endregion */
+/*#region    ENTERING UNDER 500PX */
+@media screen and (max-width: 500px) {
   .sectionWhy {
-    padding: 15px 40px 70px 40px;
+    padding: 20px 40px 180px 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 85%);
   }
-  .ulNav li a {
-    height: 4rem;
-    display: flex;
-    align-items: center;
+  .sectionBSite .h1Icon {
+    text-align: center;
+    font-size: 24px;
   }
-  .logo {
-    font-size: 34px !important;
-    align-items: center;
+  .sectionBSite ul li {
+    font-size: 25px;
+    line-height: unset;
+    padding-top: 3px;
+    margin: 25px 25px;
+  }
+  .colWhy {
+    margin-bottom: 4rem;
+  }
+  .container__faq {
+    padding: 2rem;
+  }
+  .container__faq .faq--tab label::after {
+    right: 10px;
+    top: 0;
+  }
+  .accueil {
+    padding: 40px;
+  }
+  .accueil .contentAccueil {
+    width: 100%;
+  }
+  .sectionWhy .colWhy .contentWhy h3 {
+    font-size: calc(1rem + 2vw);
+    margin-bottom: 1rem;
   }
 }
-
 /* #endregion */
-/*#region    ENTERING UNDER 1200PX */
-@media screen and (max-width: 1200px) {
-  .navigation {
-    padding: 15px 30px;
+/*#region    ENTERING UNDER 380PX */
+@media screen and (max-width: 380px) {
+  #points .container.bas {
+    padding-right: 0;
   }
-  .ulNav li a {
-    font-size: 16.5px;
-    padding: 10px 5px;
-  }
-  section#faq .faq__content .questions {
-    padding: 0.3rem 1.5rem 0.5rem 1rem !important;
+  #points .container.haut {
+    padding-left: 0;
   }
 }
 /* #endregion */
-
-@media screen and (min-width: 1500px) {
-  .faq__content .questions {
-    padding: 1rem 3rem 1rem 6rem;
-  }
-}

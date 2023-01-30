@@ -42,10 +42,10 @@
             <div class="navigation">
                 <a class='logo' href="#" onclick="toggleMenu()">MXB Tech</a>
                 <ul class="ulNav">
-                    <li><a href="#" onclick="toggleMenu()">Accueil</a></li>
-                    <li><a href="#" onclick="toggleMenu()">Pourquoi nous choisir ?</a></li>
-                    <li><a href="#" onclick="toggleMenu()">Nos Forfaits</a></li>
-                    <li><a href="#" onclick="toggleMenu()">Portfolio</a></li>
+                    <li><a href="#accueil" onclick="toggleMenu()">Accueil</a></li>
+                    <li><a href="#whyus" onclick="toggleMenu()">Pourquoi nous choisir ?</a></li>
+                    <li><a href="#tarifs" onclick="toggleMenu()">Nos Forfaits</a></li>
+                    <li><a href="#faqSection" onclick="toggleMenu()">FAQ</a></li>
                     <li class="nousJoindre"><a href="#contactUs" onclick="toggleMenu()">Nous Joindre</a></li>
                 </ul>
             </div>
@@ -60,7 +60,7 @@
         <!-- #endregion -->
         <!--#region         ACCUEIL -->
 
-        <section class="accueil">
+        <section id="accueil" class="accueil">
             <div class="contentAccueil">
                 <h1>Besoin d'un site web ?</h1>
                 <p>Avoir un site web de nos jour est devenu une norme et peut sembler compliquer. Chez MXB Tech, nous nous efforcons à rendre cela le plus simple possible pour vous créer un site web qui sauras vous épatez sans tous autant vous être dispendieux !</p>
@@ -79,7 +79,7 @@
         <!-- #endregion -->
         <!--#region         WHY US ?  -->
         <div class="bgWhy">
-            <section class="sectionWhy">
+            <section id="whyus" class="sectionWhy">
                 <div class="shadowWhy"></div>
                 <h3 class="titleWhy">POURQUOI NOUS ?</h3>
                 <div class="colWhy">
@@ -105,7 +105,11 @@
         <!-- #endregion -->
         <!--#region         POINTS -->
         <section id="points">
+
             <div class="container haut">
+                <div class="imgBox">
+                    <img src="/img/bg-main.jpg" alt="">
+                </div>
                 <div class="carte">
                     <h2>Transférez votre activité <br> professionnelle en ligne</h2>
                     <p>Un site web permet à votre entreprise d'être visible sur internet, ce qui peut être particulièrement utile si vous souhaitez atteindre de nouveaux clients.</p>
@@ -116,6 +120,7 @@
                 <div class="bandes bande-2"></div>
                 <div class="bandes bande-3"></div>
             </div>
+
             <div class="container bas">
                 <div class="carte">
                     <h2>Transférez votre activité <br> professionnelle en ligne</h2>
@@ -126,11 +131,15 @@
                 <div class="bandes bande-1"></div>
                 <div class="bandes bande-2"></div>
                 <div class="bandes bande-3"></div>
+                <div class="imgBox">
+                    <img src="/img/bg-main.jpg" alt="">
+                </div>
             </div>
+
         </section>
         <!-- #endregion -->
         <!--#region         Tarifs-->
-        <section class="sectionBSite">
+        <section id="tarifs" class="sectionBSite">
             <div class="main">
                 <div class="tarif">
                     <h1>Nos Forfaits</h1>
@@ -184,51 +193,50 @@
         <!-- #endregion -->
         <!--#region         FAQ -->
         <section id="faqSection">
-
+            <div class="container__faq">
+                <h1>Questions Fréquentes</h1>
+                <div class="faq--tab">
+                    <input type="radio" name="acc" id="acc1">
+                    <label for="acc1">
+                        <h2>01</h2>
+                        <h3>Quels types de sites web pouvez-vous créer?</h3>
+                    </label>
+                    <div class="faq--content">
+                        <p>Oui, nous pouvons créer différents types de sites web, tels que des sites vitrines, des sites e-commerce, des blogs, des sites institutionnels, etc.</p>
+                    </div>
+                </div>
+                <div class="faq--tab">
+                    <input type="radio" name="acc" id="acc2">
+                    <label for="acc2">
+                        <h2>02</h2>
+                        <h3>Pouvez-vous intégrer des fonctionnalités de médias sociaux sur mon site web?</h3>
+                    </label>
+                    <div class="faq--content">
+                        <p>Oui, nous pouvons intégrer des fonctionnalités de médias sociaux sur votre site web, telles que des boutons de partage, des flux d'actualités, etc.</p>
+                    </div>
+                </div>
+                <div class="faq--tab">
+                    <input type="radio" name="acc" id="acc3">
+                    <label for="acc3">
+                        <h2>03</h2>
+                        <h3>Pouvez-vous créer un site web mobile responsive?</h3>
+                    </label>
+                    <div class="faq--content">
+                        <p>Oui, nous pouvons créer un site web mobile responsive qui s'adapte automatiquement à la taille de l'écran de l'utilisateur.</p>
+                    </div>
+                </div>
+                <div class="faq--tab">
+                    <input type="radio" name="acc" id="acc4">
+                    <label for="acc4">
+                        <h2>04</h2>
+                        <h3>Pouvez-vous m'aider à mettre en place un système de chat en direct sur mon site web?</h3>
+                    </label>
+                    <div class="faq--content">
+                        <p>Oui, nous pouvons vous aider à mettre en place un système de chat en direct sur votre site web.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <div class="container__faq">
-            <h1>Questions Fréquentes</h1>
-            <div class="faq--tab">
-                <input type="radio" name="acc" id="acc1">
-                <label for="acc1">
-                    <h2>01</h2>
-                    <h3>Quels types de sites web pouvez-vous créer?</h3>
-                </label>
-                <div class="faq--content">
-                    <p>Oui, nous pouvons créer différents types de sites web, tels que des sites vitrines, des sites e-commerce, des blogs, des sites institutionnels, etc.</p>
-                </div>
-            </div>
-            <div class="faq--tab">
-                <input type="radio" name="acc" id="acc2">
-                <label for="acc2">
-                    <h2>02</h2>
-                    <h3>Pouvez-vous intégrer des fonctionnalités de médias sociaux sur mon site web?</h3>
-                </label>
-                <div class="faq--content">
-                    <p>Oui, nous pouvons intégrer des fonctionnalités de médias sociaux sur votre site web, telles que des boutons de partage, des flux d'actualités, etc.</p>
-                </div>
-            </div>
-            <div class="faq--tab">
-                <input type="radio" name="acc" id="acc3">
-                <label for="acc3">
-                    <h2>03</h2>
-                    <h3>Pouvez-vous créer un site web mobile responsive?</h3>
-                </label>
-                <div class="faq--content">
-                    <p>Oui, nous pouvons créer un site web mobile responsive qui s'adapte automatiquement à la taille de l'écran de l'utilisateur.</p>
-                </div>
-            </div>
-            <div class="faq--tab">
-                <input type="radio" name="acc" id="acc4">
-                <label for="acc4">
-                    <h2>04</h2>
-                    <h3>Pouvez-vous m'aider à mettre en place un système de chat en direct sur mon site web?</h3>
-                </label>
-                <div class="faq--content">
-                    <p>Oui, nous pouvons vous aider à mettre en place un système de chat en direct sur votre site web.</p>
-                </div>
-            </div>
-        </div>
         <!-- #endregion -->
         <!--#region         CONTACT US -->
         <section id="contactUs">
@@ -344,11 +352,16 @@
         <!--#region         SCRIPT  -->
         <script>
             // loading section
-            $(window).on("load",function(){
-                $(this).delay(0).queue(function() {      //changer le delai de chargement ici pour le tester
-                    $(".loading").fadeOut("slow");
-                    $(this).dequeue();
-                });
+            const loading = document.querySelector(".loading");
+            window.addEventListener("load", function() {
+            setTimeout(function() {
+            loading.style.transition = "opacity 0.8s ease";
+            loading.style.opacity = 0;
+            }, 0);
+
+            loading.addEventListener("transitionend", function() {
+                loading.classList.add('hidden');
+            });
             });
 
 
