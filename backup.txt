@@ -1404,3 +1404,206 @@ section img#mountains_front{
     display: flex;
     flex-direction: column;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section#faq {
+  padding: 100px calc(4rem + 3vw);
+  text-decoration: none;
+}
+section#faq .faq--title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: calc(1rem + 2vw);
+  color: var(--main-color-hover-);
+}
+section#faq .faq__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#faq .faq__content a {
+  text-decoration: none;
+}
+.faq__content .questions {
+  background-color: rgba(209, 209, 209, 0.589);
+  border-radius: 40px;
+  color: #444;
+  text-decoration: none;
+  padding: 1rem 3rem 1rem 6rem;
+  margin: 2rem 0;
+  position: relative;
+  font-size: calc(0.4rem + 0.67vw);
+  transition: all 0.3s ease-in-out;
+  width: 70%;
+}
+.faq__content .questions h1 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  font-size: calc(0.3rem + 1vw);
+}
+.faq__content .questions i {
+  margin-right: 1rem;
+  background-color: var(--main-color-hover-);
+  color: white;
+  padding: 0.7rem 0.9rem;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.questions .question__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*     nrgb(209, 209, 209) */
+}
+.faq__content .questions .faq--reponse {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: rgb(212, 212, 212);
+  border-radius: 40px;
+  padding: 1rem 3rem 1rem 3rem;
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: calc(0.6rem + 1vw);
+  font-weight: 300;
+  /*     display: none; */
+  margin-top: 1rem;
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: unset;
+}
+.faq__content .questions:hover {
+  cursor: pointer;
+}
+.faq__content .questions.clicked i {
+  transform: rotate(180deg) scale(1.1);
+}
+.faq__content .questions.clicked .faq--reponse {
+  position: relative;
+  transform: scaleY(1);
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="faq">
+            <h1 class="faq--title">Section FAQ</h1>
+            <div class="faq__content">
+
+                <a>
+                    <div class="questions question-1">
+                        <div class="question__container">
+                            <h1>Quels types de sites web pouvez-vous créer?</h1>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <div class="faq--reponse">
+                            <p>Oui, nous pouvons créer différents types de sites web, tels que des sites vitrines, des sites e-commerce, des blogs, des sites institutionnels, etc.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="questions question-2">
+                    <div class="question__container">
+                        <h1>Pouvez-vous intégrer des fonctionnalités de médias sociaux sur mon site web?</h1>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="faq--reponse">
+                        <p>Oui, nous pouvons intégrer des fonctionnalités de médias sociaux sur votre site web, telles que des boutons de partage, des flux d'actualités, etc.</p>
+                    </div>
+                </div>
+            
+                <div class="questions question-3">
+                    <div class="question__container">
+                        <h1>Pouvez-vous créer un site web mobile responsive?</h1>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="faq--reponse">
+                        <p>Oui, nous pouvons créer un site web mobile responsive qui s'adapte automatiquement à la taille de l'écran de l'utilisateur.</p>
+                    </div>
+                </div>
+            
+
+                <div class="questions question-4">
+                    <div class="question__container">
+                        <h1>Pouvez-vous m'aider à mettre en place un système de paiement en ligne sur mon site web?</h1>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="faq--reponse">
+                        <p>Malheuresement nous n'offrons pas ce service pour l'instant, nous préférons nous concentrer sur ce qu'on fait le mieux !</p>
+                    </div>
+                </div>
+
+            
+
+                <div class="questions question-5">
+                    <div class="question__container">
+                        <h1>Pouvez-vous m'aider à mettre en place un système de chat en direct sur mon site web?</h1>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="faq--reponse">
+                        <p>Oui, nous pouvons vous aider à mettre en place un système de chat en direct sur votre site web en utilisant des outils t</p>
+                    </div>
+                </div>
+
+<!--                 <a href="" class="faq--questions">
+                    <div class="questions question-6">
+                        <h1></h1>
+                        <div class="faq--reponse">
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="" class="faq--questions">
+                    <div class="questions question-7">
+                        <h1></h1>
+                        <div class="faq--reponse">
+                            <p></p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="" class="faq--questions">
+                    <div class="questions question-8">
+                        <h1></h1>
+                        <div class="faq--reponse">
+                            <p></p>
+                        </div>
+                    </div>
+                </a> -->
+            </div>
+        </section>
