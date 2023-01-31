@@ -21,6 +21,7 @@ html {
   --main-gradient-: linear-gradient(to right, #002654, #4f0056);
   --color-light-grey-: #e5e5e5;
   --color-light-grey-m: #f9f9f9;
+  --padding-tarifs: 0;
 }
 h2 {
   margin-bottom: unset;
@@ -33,7 +34,6 @@ body.explored {
   overflow-y: visible;
   overflow-x: hidden;
 }
-
 /*#region           LOADING */
 .loading {
   display: flex;
@@ -577,9 +577,57 @@ header.sticky .ulNav li a:hover:after {
 /*#region           TARIFS  */
 .sectionBSite {
   background-color: var(--color-light-grey-);
-  padding: 10rem;
+  position: relative;
+  padding: var(--padding-tarifs) 0;
 }
-.sectionBSite .main {
+.before__tarifs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: var(--color-light-grey-);
+  padding: 0 calc(3rem + 10vw);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: top;
+}
+.before__tarifs.clicked {
+  transform: scaleY(0);
+}
+.before__tarifs .carte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.before__tarifs .carte h1 {
+  font-size: 4rem;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  color: var(--main-color-hover-);
+  margin-bottom: 3rem;
+}
+.before__tarifs .carte h3 {
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  color: var(--main-color-hover-);
+  margin-bottom: 3rem;
+}
+.before__tarifs .carte a {
+  background: var(--main-color-hover-);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+.before__tarifs .carte a:hover {
+  cursor: pointer;
+  transform: scaleX(1.05);
+}
+.sectionBSite .sectionBSite .main {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -587,25 +635,39 @@ header.sticky .ulNav li a:hover:after {
 }
 .sectionBSite .tarif {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .sectionBSite .tarif h1 {
   color: #44068b;
   margin-bottom: 1rem;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1.8rem + 1vw);
+  position: relative;
+}
+.sectionBSite .tarif h1:before {
+  content: "";
+  width: 120%;
+  height: 5px;
+  background-color: var(--main-color-);
+  position: absolute;
+  bottom: 0;
+  left: -10%;
 }
 .sectionBSite .tarif .tarif__content {
-  display: flex;
-  justify-content: center;
   font-family: "Poppins", sans-serif;
   background-color: var(--color-light-grey-);
+  width: 100%;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   /* padding: 10rem; */
 }
 .tarif__content .tarifs {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  flex-basis: 20vw;
+  flex-basis: 350px;
+  margin: 1rem 1rem;
 }
 .tarif__content .tarifs div:first-child {
   padding: 3rem 2rem;
@@ -1090,6 +1152,10 @@ hr {
   cursor: pointer;
   color: rgb(91, 91, 91);
 }
+.legalContainer {
+  display: flex;
+  text-align: center;
+}
 .privacyToggle {
   display: none;
   transition: all 0.5s ease-in-out;
@@ -1225,6 +1291,12 @@ hr {
     display: none;
     position: absolute;
   }
+  .sectionBSite .tarif h1 {
+    font-size: calc(2rem + 1vw);
+  }
+  .tarif__content .tarifs div:first-child h3 {
+    font-size: calc(1.5rem + 1vw);
+  }
 }
 
 /* #endregion */
@@ -1321,6 +1393,9 @@ hr {
     /* width: 90%; */
     width: 90%;
   }
+  .before__tarifs {
+    padding: 0 4rem;
+  }
 }
 /* #endregion */
 /*#region    ENTERING UNDER 650PX */
@@ -1401,7 +1476,7 @@ hr {
     top: 0;
   }
   .accueil {
-    padding: 40px;
+    padding: 100px 40px;
   }
   .accueil .contentAccueil {
     width: 100%;
@@ -1409,6 +1484,24 @@ hr {
   .sectionWhy .colWhy .contentWhy h3 {
     font-size: calc(1rem + 2vw);
     margin-bottom: 1rem;
+  }
+  .containerCU {
+    padding: 20px;
+  }
+  .containerCU .row100 .colCU {
+    margin: 30px 0;
+  }
+  .legal {
+    font-size: 4vmin;
+  }
+  .before__tarifs {
+    padding: 0 2rem;
+  }
+  .before__tarifs .carte h1 {
+    font-size: 3rem;
+  }
+  .before__tarifs .carte h3 {
+    text-align: center;
   }
 }
 /* #endregion */
@@ -1419,6 +1512,25 @@ hr {
   }
   #points .container.haut {
     padding-left: 0;
+  }
+  .containerCU {
+    padding: 30px 10px;
+  }
+  .containerCU .row100 .colCU {
+    display: flex;
+    justify-content: center;
+  }
+  .tarif__content .tarifs div:last-child {
+    padding: 2rem 1rem;
+  }
+  .before__tarifs .carte h3 {
+    text-align: left;
+  }
+  .before__tarifs {
+    padding: 0 1rem;
+  }
+  .accueil {
+    padding: 100px 20px;
   }
 }
 /* #endregion */
