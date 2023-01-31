@@ -9,6 +9,6 @@ questions.forEach((question) => {
 const buttonTarif = document.querySelector('#buttonTarif');
 const beforeTarif = document.querySelector('.before__tarifs');
 
-buttonTarif.addEventListener('touchstart', ()=> {
+buttonTarif.addEventListener('click', ()=> {
     beforeTarif.classList.add('clicked');
 });
