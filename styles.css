@@ -44,7 +44,7 @@ body.explored {
   background: rgb(18, 18, 18);
   /*     backdrop-filter: blur(15px); */ /* LAG TROP */
   position: fixed;
-  z-index: 100000; /*  Z-INDEX ABUSIF ATTENTION PEUT ETRE LA CAUSE DE BIEN DES PROBLEMES !!!  */
+  z-index: 10000; /*  Z-INDEX ABUSIF ATTENTION PEUT ETRE LA CAUSE DE BIEN DES PROBLEMES !!!  */
 }
 .loading.hidden {
   z-index: -1000;
@@ -59,6 +59,7 @@ body.explored {
   animation: animateLoad 4s linear infinite;
   -webkit-animation: animateLoad 4s linear infinite;
   overflow: visible;
+  z-index: 10200;
 }
 @keyframes animateLoad {
   0% {
