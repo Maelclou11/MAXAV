@@ -76,6 +76,7 @@ body.explored {
   height: 100%;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+  overflow: visible;
 }
 
 .cube div span {
@@ -92,10 +93,12 @@ body.explored {
   justify-content: center;
   align-items: center;
   color: white;
+  overflow: visible;
 }
 .cube div span p {
   padding: 0 5px;
   box-shadow: 0 0 0px 5px #fff;
+  overflow: visible;
 }
 .top {
   position: absolute;
@@ -106,6 +109,7 @@ body.explored {
   background: var(--main-color-hover-);
   transform: rotateX(90deg) translateZ(100px);
   -webkit-transform: rotateX(90deg) translateZ(100px);
+  overflow: visible;
 }
 .top::before {
   content: "";
@@ -123,6 +127,7 @@ body.explored {
   -webkit-box-shadow: 0 0 120px rgba(119, 0, 255, 0.582),
     /*0 0 200px rgba(119, 0, 255, 0.582),*/ 0 0 300px rgb(119, 0, 255, 0.6),
     /*0 0 400px rgba(119, 0, 255, 0.8),*/ 0 0 500px rgb(119, 0, 255);
+  overflow: visible;
 }
 .top::after {
   content: "";
@@ -138,6 +143,7 @@ body.explored {
     0 0 300px rgb(119, 0, 255, 0.6),
     0 0 400px rgba(119, 0, 255, 0.8),
     0 0 500px rgb(119, 0, 255); */
+  overflow: visible;
 }
 
 /* #endregion */
