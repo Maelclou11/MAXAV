@@ -586,7 +586,6 @@ header.sticky .ulNav li a:hover:after {
 .sectionBSite {
   background-color: var(--color-light-grey-);
   position: relative;
-  padding: var(--padding-tarifs) 0;
 }
 .before__tarifs {
   position: absolute;
@@ -598,11 +597,13 @@ header.sticky .ulNav li a:hover:after {
   z-index: 10;
   background: var(--color-light-grey-);
   padding: 0 calc(3rem + 10vw);
-  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 1s ease;
   transform-origin: top;
 }
 .before__tarifs.clicked {
   transform: scaleY(0);
+  opacity: 0;
 }
 .before__tarifs .carte {
   display: flex;
