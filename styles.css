@@ -58,6 +58,7 @@ body.explored {
   transform: rotateX(-30deg);
   animation: animateLoad 4s linear infinite;
   -webkit-animation: animateLoad 4s linear infinite;
+  overflow: visible;
 }
 @keyframes animateLoad {
   0% {
@@ -990,11 +991,15 @@ footer::before {
 .rowFooter {
   width: 85%;
   margin: auto;
-  display: flex;
+  /*   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  align-content: space-between;
+  align-content: space-between; */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
 }
 .colFooter {
   flex-basis: 25%;
@@ -1087,9 +1092,13 @@ form button .fas {
   font-size: 20px;
   color: #3d3d3d;
   background: #fff;
-  margin-right: 15px;
   cursor: pointer;
   transition: all 0.5s ease;
+}
+.social-icons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 .social-icons .fa-brands:hover {
   color: #ffffff;
@@ -1103,6 +1112,7 @@ hr {
 }
 .copyright {
   text-align: center;
+  margin-bottom: 1rem;
 }
 .underline {
   width: 100%;
@@ -1147,6 +1157,7 @@ hr {
   text-decoration: none;
   color: white;
   transition: all 0.3s ease-in-out;
+  margin-bottom: 0.5rem;
 }
 .legal:hover {
   cursor: pointer;
@@ -1348,8 +1359,13 @@ hr {
   header.sticky {
     padding: unset;
   }
-  .rowFooter {
+  /*   .rowFooter {
     justify-content: space-around;
+  } */
+  .rowFooter {
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
   }
   footer {
     clip-path: polygon(0% 2%, 25% 0%, 100% 3%, 100% 100%, 0% 100%);
@@ -1402,7 +1418,7 @@ hr {
 @media screen and (max-width: 650px) {
   .sectionWhy .titleWhy {
     text-align: center;
-    font-size: 50px;
+    font-size: calc(2rem + 1vw);
   }
   .sectionWhy .colWhy {
     flex-direction: column;
@@ -1492,7 +1508,7 @@ hr {
     margin: 30px 0;
   }
   .legal {
-    font-size: 4vmin;
+    font-size: 3.5vmin;
   }
   .before__tarifs {
     padding: 0 2rem;
@@ -1502,6 +1518,27 @@ hr {
   }
   .before__tarifs .carte h3 {
     text-align: center;
+  }
+  .rowFooter {
+    grid-template-areas:
+      "desc desc"
+      "adresse lien"
+      "infolettre infolettre";
+  }
+  .colFooter:nth-child(1) {
+    grid-area: desc;
+    margin-bottom: 10px;
+  }
+  .colFooter:nth-child(2) {
+    grid-area: adresse;
+    margin-bottom: 10px;
+  }
+  .colFooter:nth-child(3) {
+    grid-area: lien;
+    margin-bottom: 10px;
+  }
+  .colFooter:nth-child(4) {
+    grid-area: infolettre;
   }
 }
 /* #endregion */

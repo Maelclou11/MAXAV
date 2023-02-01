@@ -9,6 +9,8 @@ questions.forEach((question) => {
 const buttonTarif = document.querySelector('#buttonTarif');
 const beforeTarif = document.querySelector('.before__tarifs');
 
-buttonTarif.addEventListener('click', ()=> {
+function clicked() {
     beforeTarif.classList.add('clicked');
-});
+};
+/* buttonTarif.addEventListener('click', ()=> {
+}); */

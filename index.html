@@ -15,9 +15,6 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- JQuerry -->
-        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-        crossorigin="anonymous"></script>
     </head>
     <body>
         <!--#region         LOADING -->
@@ -49,10 +46,10 @@
                     <li class="nousJoindre"><a href="#contactUs" onclick="toggleMenu()">Nous Joindre</a></li>
                 </ul>
             </div>
-            
+
             <div class="toggle" onclick="toggleMenu()">
 
-                <i class="fa-solid fa-bars open" onclick></i>
+                <i class="fa-solid fa-bars open"></i>
                 <i class="fa-solid fa-xmark close"></i>
 
             </div>
@@ -144,7 +141,7 @@
                 <div class="carte">
                     <h1>Nos tarifs</h1>
                     <h3>Nous comprenons que chaque entreprise a des besoins uniques en matière de création de site web. C'est pourquoi nous offrons des tarifs adaptés à vos besoins spécifiques plutôt que des tarifs de base fixes. Nous nous engageons à travailler avec vous pour créer un site web qui répond à vos besoins et à votre budget. N'hésitez pas à nous contacter pour discuter de vos projets et obtenir une estimation personnalisée gratuitement. Mais si vous voulez voir à quoi ressemble nos tarifs de base, cliquer sur le boutons ci-dessous !</h3>
-                    <a href="javascript:void(0)"id="buttonTarif">Cliquer pour voir les tarifs</a>
+                    <a href="javascript:void(0)"id="buttonTarif" onclick="clicked()">Cliquer pour voir les tarifs</a>
                 </div>
             </div>
             <div class="main">
@@ -358,7 +355,7 @@
         <!--#region         SCRIPT  -->
         <script>
             // loading section
-            const loading = document.querySelector(".loading");
+/*             const loading = document.querySelector(".loading");
             window.addEventListener("load", function() {
             setTimeout(function() {
             loading.style.transition = "opacity 0.8s ease";
@@ -368,7 +365,7 @@
             loading.addEventListener("transitionend", function() {
                 loading.classList.add('hidden');
             });
-            });
+            }); */
 
 
             // menu
