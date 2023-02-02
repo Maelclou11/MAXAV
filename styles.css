@@ -340,7 +340,7 @@ header.sticky .ulNav li a:hover:after {
   font-style: normal;
   font-weight: 700;
   font-size: calc(1.5rem + 2vw);
-/*   line-height: 104px; */
+  /*   line-height: 104px; */
   color: #fff;
 }
 .accueil .contentAccueil p {
@@ -518,13 +518,13 @@ header.sticky .ulNav li a:hover:after {
 }
 #points .bas .carte {
   border-radius: 0px 40px 40px 0px;
-  padding: calc(1.5rem + 1vmin) calc(1.5rem + 1vmin) calc(1.5rem + 1vmin) 1rem;
+  padding: calc(1.5rem + 1vmin) calc(1.5rem + 1vmin) calc(1.5rem + 1vmin) 3rem;
 }
 #points h2 {
   /* color: var(--main-color-); */
   color: white;
   margin: calc(0.5rem + 0.25vh) 0px;
-  font-size: calc(0.80rem + 0.8vw);
+  font-size: calc(0.8rem + 0.8vw);
 }
 #points p {
   /* color: var(--main-color-); */
@@ -590,6 +590,7 @@ header.sticky .ulNav li a:hover:after {
 .sectionBSite {
   background-color: var(--color-light-grey-);
   position: relative;
+  min-height: 500px;
 }
 .before__tarifs {
   position: absolute;
@@ -601,13 +602,13 @@ header.sticky .ulNav li a:hover:after {
   z-index: 10;
   background: var(--color-light-grey-);
   padding: 0 calc(3rem + 10vw);
-  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: opacity 1s ease;
+  /* transition: transform 0.5s ease;
+  transition: opacity 1s ease 0.5s; */
+  transition: all 0.5s ease;
   transform-origin: top;
 }
 .before__tarifs.clicked {
   transform: scaleY(0);
-  opacity: 0;
 }
 .before__tarifs .carte {
   display: flex;
@@ -635,6 +636,7 @@ header.sticky .ulNav li a:hover:after {
   padding: 1rem 3rem;
   font-size: 20px;
   transition: all 0.5s ease;
+  text-align: center;
 }
 .before__tarifs .carte a:hover {
   cursor: pointer;
@@ -651,6 +653,10 @@ header.sticky .ulNav li a:hover:after {
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: none;
+}
+#tarifs.explored .tarif {
+  display: flex;
 }
 .sectionBSite .tarif h1 {
   color: #44068b;
@@ -738,6 +744,7 @@ header.sticky .ulNav li a:hover:after {
 }
 .container__faq .faq--tab input {
   appearance: none;
+  width: 100%;
 }
 .container__faq .faq--tab label {
   display: flex;
@@ -751,12 +758,12 @@ header.sticky .ulNav li a:hover:after {
   right: 20px;
   font-size: 2em;
   color: rgba(0, 0, 0, 0.1);
-  transition: transform 1s;
+  transition: transform 1s ease;
 }
 .container__faq .faq--tab:hover label::after {
   color: #333;
 }
-.container__faq .faq--tab input:checked ~ label::after {
+.container__faq .faq--tab input.revealTarif ~ label::after {
   transform: rotate(135deg);
   color: #fff;
 }
@@ -781,7 +788,7 @@ header.sticky .ulNav li a:hover:after {
     var(--main-color-hover-)
   );
 }
-.container__faq .faq--tab input:checked ~ label h2 {
+.container__faq .faq--tab input.revealTarif ~ label h2 {
   /* chiffre lorsque l'on clique  */
   position: absolute;
   top: 0;
@@ -793,30 +800,31 @@ header.sticky .ulNav li a:hover:after {
   justify-content: flex-end;
   padding: 20px;
 }
-.container__faq .faq--tab input:checked ~ label h3 {
+.container__faq .faq--tab input.revealTarif ~ label h3 {
   position: relative;
   font-weight: 500;
   color: #fff;
   z-index: 10;
   margin-bottom: 1rem;
 }
-.container__faq .faq--tab input:checked ~ .faq--content p {
+.container__faq .faq--tab input.revealTarif ~ .faq--content p {
   color: #fff;
-  margin-left: 1rem;
 }
 .container__faq .faq--tab .faq--content {
   max-height: 0;
-  transition: 1s;
+  transition: all 0.5s ease;
   overflow: hidden;
 }
-.container__faq .faq--tab input:checked ~ .faq--content {
+.container__faq .faq--tab input.revealTarif ~ .faq--content {
   max-height: 100vh;
+  transition: all 0s ease;
 }
 .container__faq .faq--tab .faq--content p {
   position: relative;
   padding-inline-start: 10px 0;
   color: #333;
   z-index: 10;
+  margin-left: 1rem;
 }
 /* #endregion */
 /*#region           CONTACT US */
@@ -1278,6 +1286,13 @@ hr {
   }
 }
 /* #endregion */
+/*#region    ENTERING UNDER 1350px  */
+@media screen and (max-width: 1350px) {
+  .sectionBSite {
+    min-height: 800px;
+  }
+}
+/* #endregion */
 /*#region    ENTERING UNDER 1200PX */
 @media screen and (max-width: 1200px) {
   .navigation {
@@ -1485,20 +1500,23 @@ hr {
   .accueil .boutonContainer a {
     margin: 10px 0 10px 0;
   }
+  .sectionBSite {
+    min-height: 1100px;
+  }
 }
 /* #endregion */
 /*#region    ENTERING UNDER 500PX */
 @media screen and (max-width: 500px) {
   .sectionWhy {
     padding: 10px 10px 40px 10px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 85%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 87%);
   }
   .sectionBSite .h1Icon {
     text-align: center;
     font-size: 24px;
   }
   .sectionBSite ul li {
-    font-size: 25px;
+    font-size: 20px;
     line-height: unset;
     padding-top: 3px;
     margin: 25px 25px;
@@ -1546,6 +1564,7 @@ hr {
   }
   .before__tarifs .carte h3 {
     text-align: center;
+    font-size: calc(1rem + 1vw);
   }
   .rowFooter {
     grid-template-areas:
@@ -1578,6 +1597,21 @@ hr {
   #points .container.bas {
     padding-right: 0;
   }
+  #points .bas .carte {
+    padding: calc(1.5rem + 1vmin) calc(1.5rem + 1vmin) calc(1.5rem + 1vmin) 1rem;
+  }
+  #points .bas .carte {
+    padding: calc(1.5rem + 1vmin) 1rem calc(1.5rem + 1vmin) calc(1.5rem + 1vmin);
+  }
+  .tarif__content .tarifs div:first-child {
+    padding: 1.5rem 1rem;
+  }
+  .tarif__content .tarifs div:last-child {
+    padding: 1rem 1rem;
+  }
+  .tarif__content .tarifs {
+    margin: 1rem 2rem;
+  }
 }
 /* #endregion */
 /*#region    ENTERING UNDER 380PX */
@@ -1588,9 +1622,6 @@ hr {
   .containerCU .row100 .colCU {
     display: flex;
     justify-content: center;
-  }
-  .tarif__content .tarifs div:last-child {
-    padding: 2rem 1rem;
   }
   .before__tarifs .carte h3 {
     text-align: left;

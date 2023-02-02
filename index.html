@@ -144,7 +144,7 @@
                 <div class="carte">
                     <h1>Nos tarifs</h1>
                     <h3>Nous comprenons que chaque entreprise a des besoins uniques en matière de création de site web. C'est pourquoi nous offrons des tarifs adaptés à vos besoins spécifiques plutôt que des tarifs de base fixes. Nous nous engageons à travailler avec vous pour créer un site web qui répond à vos besoins et à votre budget. N'hésitez pas à nous contacter pour discuter de vos projets et obtenir une estimation personnalisée gratuitement. Mais si vous voulez voir à quoi ressemble nos tarifs de base, cliquer sur le boutons ci-dessous !</h3>
-                    <a href="javascript:void(0)"id="buttonTarif" class="buttonTarifs">Cliquer pour voir les tarifs</a>
+                    <a href="#tarifs" id="buttonTarif" class="buttonTarifs" onclick="openTarif()">Cliquer pour voir les tarifs</a>
                 </div>
             </div>
             <div class="main">
@@ -203,7 +203,7 @@
             <div class="container__faq">
                 <h1>Questions Fréquentes</h1>
                 <div class="faq--tab">
-                    <input type="radio" name="acc" id="acc1">
+                    <input type="radio" name="acc" id="acc1" onclick="toggleRadio(this)">
                     <label for="acc1">
                         <h2>01</h2>
                         <h3>Quels types de sites web pouvez-vous créer?</h3>
@@ -213,7 +213,7 @@
                     </div>
                 </div>
                 <div class="faq--tab">
-                    <input type="radio" name="acc" id="acc2">
+                    <input type="radio" name="acc" id="acc2" onclick="toggleRadio(this)">
                     <label for="acc2">
                         <h2>02</h2>
                         <h3>Pouvez-vous intégrer des fonctionnalités de médias sociaux sur mon site web?</h3>
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <div class="faq--tab">
-                    <input type="radio" name="acc" id="acc3">
+                    <input type="radio" name="acc" id="acc3" onclick="toggleRadio(this)">
                     <label for="acc3">
                         <h2>03</h2>
                         <h3>Pouvez-vous créer un site web mobile responsive?</h3>
@@ -233,7 +233,7 @@
                     </div>
                 </div>
                 <div class="faq--tab">
-                    <input type="radio" name="acc" id="acc4">
+                    <input type="radio" name="acc" id="acc4" onclick="toggleRadio(this)">
                     <label for="acc4">
                         <h2>04</h2>
                         <h3>Pouvez-vous m'aider à mettre en place un système de chat en direct sur mon site web?</h3>

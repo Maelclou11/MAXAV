@@ -1,19 +1,17 @@
 /*#region       FAQ  */
-const questions = document.querySelectorAll('.questions');
-
-questions.forEach((question) => {
-    question.addEventListener('click', ()=> {
-        question.classList.toggle('clicked');
-    });
-});
-
-const buttonTarif = document.querySelector('#buttonTarif');
+function toggleRadio(buttonRadio) {
+    buttonRadio.classList.toggle('revealTarif');
+}
+/* #endregion */
+/*#region       TARIFS  */
 const beforeTarif = document.querySelector('.before__tarifs');
+const tarifSection = document.querySelector('#tarifs');
 
-buttonTarif.addEventListener('click', ()=> {
+function openTarif() {
     beforeTarif.classList.add('clicked');
+    tarifSection.classList.add('explored');
+}
 
-});
 
 /* #endregion */
 /*#region       REVEAL ANIMATION  */
