@@ -34,6 +34,9 @@ body.explored {
   overflow-y: visible;
   overflow-x: hidden;
 }
+.mb-1 {
+  margin-bottom: 1rem;
+}
 /*#region           LOADING */
 .loading {
   display: flex;
@@ -322,7 +325,7 @@ header.sticky .ulNav li a:hover:after {
 /* #endregion */
 /*#region           ACCUEIL */
 .accueil {
-  min-height: 80vh;
+  min-height: 90vh;
   background-image: url("img/bg-main.png");
   background-size: cover;
   display: flex;
@@ -350,6 +353,7 @@ header.sticky .ulNav li a:hover:after {
   font-size: 28px;
   line-height: 154.02%;
   color: #fff;
+  margin: 2rem 0;
 }
 .accueil .boutonContainer {
   width: 320px;
