@@ -49,8 +49,24 @@ ScrollReveal().reveal('#points .container.bas .bandes', { delay: 400, origin: 'l
 ScrollReveal().reveal('#tarifs .before__tarifs h3', { delay: 300, origin: 'top'});
 ScrollReveal().reveal('#tarifs .before__tarifs h3', { delay: 500, origin: 'top'});
 ScrollReveal().reveal('#tarifs a', { delay: 600, origin: 'top'});
-
-
+/* #endregion */
+/*#region       SCROLL HEIGHT   */
+    document.querySelectorAll("a[href^='#']").forEach(function(link) {
+        link.addEventListener("click", function(event) {
+          event.preventDefault();
+          var header = document.querySelector('.navigation');
+          var headerHeight = header.offsetHeight;
+          var targetId = link.getAttribute("href");
+          var target = document.querySelector(targetId);
+          var targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+          var finalPosition = targetPosition - headerHeight;
+          window.scrollTo({
+            top: finalPosition,
+            behavior: "smooth"
+          });
+        });
+      });
+/* #endregion */
 
 
 

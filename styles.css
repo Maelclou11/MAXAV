@@ -152,13 +152,19 @@ body.explored {
 
 /* #endregion */
 /*#region           NAV */
+header {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  z-index: 100;
+}
 header .navigation {
   /* Bar Complete Menu */
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
-  height: fit-content;
+  /* height: fit-content; */
   z-index: 100;
   transition: all 0.5s ease-in-out;
   background: var(--main-color-hover-);
@@ -1379,6 +1385,7 @@ hr {
   .navigation.active {
     right: 0;
     transform: scaleX(1);
+    -webkit-transform: scaleX(1);
   }
   .navigation .ulNav {
     flex-direction: column;
