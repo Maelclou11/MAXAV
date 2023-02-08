@@ -3,17 +3,18 @@
 <html lang="fr">
 
     <head>
-        <title>MXB</title>
+        <title>MXB Tech Création de site web</title>
         <meta charset="utf-8">
-        <meta name="description" content="This is a description of my website.">
-        <link rel="icon" type="image/png" href="">  <!-- Logo Icon -->
+        <meta name="description" content="Notre entreprise de web design a une vision claire : nous croyons en la puissance d'un site web bien conçu pour faire grandir les entreprises. Nous visons à créer des pages web qui sont à la fois belles et fonctionnelles, axées sur les objectifs de notre client.">
+        <link rel="icon" type="image/png" href="./img/favicon.png">  <!-- Logo Icon -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="styles.css">
         <!-- <link rel="stylesheet" href="../CSS/color1.css"> -->
 <!--         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
         
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <link rel="preload" as="style" crossorigin href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" onload="this.rel='stylesheet'"/>
 
         <!--    Scroll Reveal JS    -->
         <script src="https://unpkg.com/scrollreveal"></script>
@@ -21,7 +22,7 @@
     </head>
     <body>
         <!--#region         LOADING -->
-        <div class="loading">
+<!--         <div class="loading">
             <div class="cube">
                 <div class="top"></div>
                 <div class="div">
@@ -31,7 +32,7 @@
                     <span style="--i:3;"><p>TECH</p></span>
                 </div>
             </div>
-        </div>
+        </div> -->
             <!-- #endregion -->
         <!--#region         NAV  -->
         <header>
@@ -40,7 +41,7 @@
             <!-- span*5 = 5 span--> <!-- a[] -->
 
             <div class="navigation">
-                <a class='logo' href="#" onclick="toggleMenu()">MXB Tech</a>
+                <a class='logo' href="#accueil" onclick="toggleMenu()">MXB Tech</a>
                 <ul class="ulNav">
                     <li><a href="#accueil" onclick="toggleMenu()">Accueil</a></li>
                     <li><a href="#whyus" onclick="toggleMenu()">Pourquoi nous choisir ?</a></li>
@@ -65,11 +66,11 @@
                 <p>Avoir un site web de nos jour est devenu une norme et cela peut sembler compliqué. Chez MXB Tech, nous nous efforçons de rendre cela le plus simple possible pour vous créer un site web entièrement programmé, qui saura vous épater, tout en gardant des tarifs compétitifs !</p>
             </div>
             <div class="boutonContainer">
-                <a class="first">
+                <a class="first" href="#contactUs">
                     Commencer
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
-                <a class="second"> 
+                <a class="second" href="#whyus"> 
                     Pourquoi un site ?
                 </a>
             </div>
@@ -80,7 +81,7 @@
         <div class="bgWhy">
             <section id="whyus" class="sectionWhy">
                 <div class="shadowWhy"></div>
-                <h3 class="titleWhy">POURQUOI NOUS ?</h3>
+                <h2 class="titleWhy">POURQUOI NOUS ?</h2>
                 <div class="colWhy">
                     <div class="contentWhy">
                         <h3>Optimiser votre site pour <span class="specialWord">VOUS</span>.</h3>
@@ -143,8 +144,8 @@
             <div class="before__tarifs">
                 <div class="carte">
                     <h1>Nos tarifs</h1>
-                    <h3>Nous comprenons que chaque entreprise a des besoins uniques en matière de création de site web. C'est pourquoi nous offrons des tarifs adaptés à vos besoins spécifiques plutôt que des tarifs de base fixes. Nous nous engageons à travailler avec vous pour créer un site web qui répond à vos besoins et à votre budget. N'hésitez pas à nous contacter pour discuter de vos projets et obtenir une estimation personnalisée gratuitement. Si vous voulez voir à quoi ressemble nos tarifs de base, cliquer sur le bouton ci-dessous.</h3>
-                    <a href="#tarifs" id="buttonTarif" class="buttonTarifs" onclick="openTarif()">Cliquer pour voir les tarifs</a>
+                    <p>Nous comprenons que chaque entreprise a des besoins uniques en matière de création de site web. C'est pourquoi nous offrons des tarifs adaptés à vos besoins spécifiques plutôt que des tarifs de base fixes. Nous nous engageons à travailler avec vous pour créer un site web qui répond à vos besoins et à votre budget. N'hésitez pas à nous contacter pour discuter de vos projets et obtenir une estimation personnalisée gratuitement. Si vous voulez voir à quoi ressemble nos forfaits de base, cliquer sur le bouton ci-dessous.</p>
+                    <a href="#tarifs" id="buttonTarif" class="buttonTarifs" onclick="openTarif()">Cliquer pour voir les forfaits</a>
                 </div>
             </div>
             <div class="main">
@@ -154,42 +155,42 @@
                         <div class="tarifs tarif-1">
                             <div>
                                 <h3>Forfait Basique</h3>
-                                <h5>À partir de 800$</h5>
+                                <h5></h5>
                             </div>
                             <div>
                                 <ul class="avantages">
                                     <li><img class="crochet" src="img/crochet.svg" alt="">1 Page</li>
                                     <li><img class="crochet" src="img/crochet.svg" alt="">2 Révision</li>
                                     <li><img class="crochet" src="img/crochet.svg" alt="">Adapté pour mobile</li>
-                                    <li><img class="crochet" src="img/crochet.svg" alt="">80$ Par Mois </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="tarifs tarif-2">
                             <div>
                                 <h3>Forfait Standart</h3>
-                                <h5>À partir de 1200$</h5>
+                                <h5></h5>
                             </div>
                             <div>
                                 <ul class="avantages">
                                     <li><img class="crochet" src="img/crochet.svg" alt="">3 Page</li>
                                     <li><img class="crochet" src="img/crochet.svg" alt="">3 Révision</li>
                                     <li><img class="crochet" src="img/crochet.svg" alt="">Adapté pour mobile</li>
-                                    <li><img class="crochet" src="img/crochet.svg" alt="">80$ Par Mois </li>
+                                    <li><img class="crochet" src="img/crochet.svg" alt="">Marketing web</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="tarifs tarif-3">
                             <div>
                                 <h3>Forfait Premium</h3>
-                                <h5>À partir de 2000$</h5>
+                                <h5></h5>
                             </div>
                             <div>
                                 <ul class="avantages">
                                     <li><img class="crochet" src="img/crochet.svg" alt="">6 Page</li>
                                     <li><img class="crochet" src="img/crochet.svg" alt="">5 Révision</li>
                                     <li><img class="crochet" src="img/crochet.svg" alt="">Adapté pour mobile</li>
-                                    <li><img class="crochet" src="img/crochet.svg" alt="">200$ Par Mois </li>
+                                    <li><img class="crochet" src="img/crochet.svg" alt="">Marketing web</li>
+                                    <li><img class="crochet" src="img/crochet.svg" alt="">Prototype de design</li>
                                 </ul>
                             </div>
                         </div>
@@ -262,15 +263,17 @@
                 <div class="row100">
                     <div class="colCU">
                         <div class="inputBoxCU">
-                            <input type="textCU" name="" required="required">
+                            <label for="Full name">Nom Complet</label>
+                            <input type="textCU" name="Full Name" required="required">
                             <span class="textCU">Nom Complet</span>
                             <span class="line"></span>
                         </div>
                     </div>
                     <div class="colCU">
                         <div class="inputBoxCU">
-                            <input type="textCU" name="" required="required">
-                            <span class="textCU">Délai Optimal</span>
+                            <label for="Full name">Forfait</label>
+                            <input type="textCU" name="Type de Forfait" required="required">
+                            <span class="textCU">Type de forfait</span>
                             <span class="line"></span>
                         </div>
                     </div>
@@ -278,14 +281,16 @@
                 <div class="row100">
                     <div class="colCU">
                         <div class="inputBoxCU">
-                            <input type="textCU" name="" required="required">
+                            <label for="Full name">Courriel</label>
+                            <input type="textCU" name="Email" required="required">
                             <span class="textCU">Courriel</span>
                             <span class="line"></span>
                         </div>
                     </div>
                     <div class="colCU">
                         <div class="inputBoxCU">
-                            <input type="textCU" name="" required="required">
+                            <label for="Full name">Numéro de téléphone</label>
+                            <input type="textCU" name="Telephone" required="required">
                             <span class="textCU">Numéro de téléphone</span>
                             <span class="line"></span>
                         </div>
@@ -294,7 +299,8 @@
                 <div class="row100">
                     <div class="colCU">
                         <div class="inputBoxCU textarea">
-                            <textarea required="required"></textarea>
+                            <label for="Full name">Message</label>
+                            <textarea required="required" name="Message"></textarea>
                             <span class="textCU">Dites-nous comment vous aidez...</span>
                             <span class="line"></span>
                         </div>
@@ -315,7 +321,7 @@
                 <div class="rowFooter">
                                 <!-- Colonne 1 -->
                     <div class="colFooter">
-                        <h1 class="mb-1">MXB Tech</h1> 
+                        <h3 class="logoFooter">MXB Tech</h3> 
                         <p>Notre entreprise de web design a une vision claire : nous croyons en la puissance d'un site web bien conçu pour faire grandir les entreprises. Nous visons à créer des sites web qui sont à la fois beaux et fonctionnels, axés sur les objectifs de notre client. Nous croyons que chaque entreprise mérite un site web qui reflète sa personnalité et sa mission, et nous travaillons sans relâche pour les aider à atteindre cet objectif. Enfin, nous sommes passionnés par la conception de sites web et sommes impatients de travailler avec vous !</p>
                     </div>
                                 <!-- Colonne 2 -->
@@ -325,8 +331,8 @@
                         <p>Canada, Québec</p>
                         <p>Lambton, G0M 1H0</p>
                         <p class="email-id">mxbservice@hotmail.com</p>
-                        <a class="mobileFooter">1 + 819-214-6320</a>
-                        <p class="mobileFooter">1 + 819-214-6320</p>
+                        <a class="mobileFooter" href="tel:+18192146320">1 + (819) 214-6320</a>
+                        <p class="mobileFooter" href="tel:+18192379608">1 + (819) 237-9608</p>
                     </div>
                                 <!-- Colonne 3 -->
                     <div class="colFooter">
@@ -348,7 +354,7 @@
                         <form action="https://formsubmit.co/1ca91f4e0d59f2099285041865d7d46e" method="POST">
                             <i class="far fa-envelope"></i>
                             <input autocomplete="off" name="Email" type="email" placeholder="Entrer votre courriel" required>
-                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                            <button type="submit" name="Envoyer"><i class="fas fa-arrow-right"></i>&nbsp;</button>
                         </form>
     
                         <div class="social-icons">
@@ -361,7 +367,7 @@
                 </div>
                 <hr>
                 <p class="copyright">Copyright © 2022 MXB Développement. Tous Droits Réservés.</p>
-                <p class="legalContainer"><a class="legal" onclick="togglePrivacy()">Politique de confidentialité&nbsp;</a> || <a class="legal" onclick="toggleTerms()">&nbsp;Conditions d'utilisations&nbsp;</a> || <a class="legal" onclick="toggleRefund()">&nbsp;Politique de Remboursement</a></p>
+                <!-- <p class="legalContainer"><a class="legal" onclick="togglePrivacy()">Politique de confidentialité&nbsp;</a> || <a class="legal" onclick="toggleTerms()">&nbsp;Conditions d'utilisations&nbsp;</a> || <a class="legal" onclick="toggleRefund()">&nbsp;Politique de Remboursement</a></p> -->
 
             </footer>
             </div>
@@ -369,7 +375,7 @@
         <!--#region         SCRIPT  -->
         <script>
 /*             // loading section*/             
-            const loading = document.querySelector(".loading");
+/*             const loading = document.querySelector(".loading");
             window.addEventListener("load", function() {
             setTimeout(function() {
             loading.style.transition = "opacity 0.8s ease";
@@ -379,7 +385,7 @@
             loading.addEventListener("transitionend", function() {
                 loading.classList.add('hidden');
             });
-            });
+            }); */
 
 
             // menu

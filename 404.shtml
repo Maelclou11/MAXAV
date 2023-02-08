@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <title>MXB Tech Création de site web</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Notre entreprise de web design a une vision claire : nous croyons en la puissance d'un site web bien conçu pour faire grandir les entreprises. Nous visons à créer des pages web qui sont à la fois belles et fonctionnelles, axées sur les objectifs de notre client."
+    />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <!-- Logo Icon -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="../CSS/color1.css"> -->
+    <!--         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+  </head>
+
+  <body>
+    <section id="P404">
+      <div class="top1">
+        <h1>MXB Tech</h1>
+      </div>
+      <div class="container">
+        <h1>Page non trouvée</h1>
+        <h2>
+          Désolé, cette page est actuellement en travaux ou temporairement
+          indisponible. Nous nous excusons pour les désagréments causés.
+          Veuillez réessayer plus tard ou visiter d'autres sections de notre
+          site.
+        </h2>
+        <a href="index.html#accueil">Retournez à l'acceuil</a>
+      </div>
+    </section>
+  </body>
+</html>

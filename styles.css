@@ -34,9 +34,6 @@ body.explored {
   overflow-y: visible;
   overflow-x: hidden;
 }
-.mb-1 {
-  margin-bottom: 1rem;
-}
 /*#region           LOADING */
 .loading {
   display: flex;
@@ -227,7 +224,7 @@ header.sticky .navigation .ulNav li a:hover {
   text-align: center;
   margin: 0 10px;
   color: #fff;
-  font-size: 23px;
+  font-size: calc(0.7rem + 1.2vmin);
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
   padding: 5px 10px;
@@ -332,7 +329,7 @@ header.sticky .ulNav li a:hover:after {
 /*#region           ACCUEIL */
 .accueil {
   min-height: 90vh;
-  background-image: url("img/bg-main.png");
+  background-image: url("img/bg-main.webp");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -378,10 +375,10 @@ header.sticky .ulNav li a:hover:after {
   line-height: 40px;
   background-color: #6d0ade;
   padding: 10px 25px 10px 25px;
-  border-radius: 16px;
   color: #fff;
   margin: 0 10px 0 10px;
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
 }
 .accueil .boutonContainer a:last-child {
   background-color: #fff;
@@ -630,14 +627,13 @@ header.sticky .ulNav li a:hover:after {
   letter-spacing: 1px;
   line-height: 1.7;
   color: var(--main-color-hover-);
-  margin-bottom: 3rem;
 }
-.before__tarifs .carte h3 {
+.before__tarifs .carte p {
   font-size: 24px;
   letter-spacing: 1px;
   line-height: 1.7;
   color: var(--main-color-hover-);
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 .before__tarifs .carte a {
   background: var(--main-color-hover-);
@@ -700,7 +696,7 @@ header.sticky .ulNav li a:hover:after {
 }
 .tarif__content .tarifs div:first-child {
   padding: 3rem 2rem;
-  background-color: #44068b;
+  background-color: var(--main-color-);
   color: white;
   border: 1px solid black;
 }
@@ -846,6 +842,11 @@ header.sticky .ulNav li a:hover:after {
   overflow: hidden;
   display: flex;
   justify-content: center;
+}
+#contactUs label {
+  position: absolute;
+  visibility: none;
+  opacity: 0;
 }
 
 /*#contactUs::before{     Ball de gauche
@@ -1040,6 +1041,10 @@ footer::before {
 }
 .colFooter:nth-child(2) {
   flex-basis: 15%;
+}
+.logoFooter {
+  font-size: 26px;
+  font-family: "Exo 2";
 }
 .logo-footer {
   margin-bottom: 30px;
@@ -1288,6 +1293,49 @@ hr {
   display: flex;
 }
 /* #endregion */
+/*#region           404 */
+#P404 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: calc(2rem + 6vmin);
+}
+#P404 .top1 {
+  height: 10%;
+  width: 100%;
+}
+#P404 .top1 h1 {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: calc(1.4rem + 1.3vmin);
+  color: var(--main-color-);
+}
+#P404 .container {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#P404 .container h1 {
+  color: var(--main-color-);
+  font-size: calc(2rem + 3.5vmin);
+  margin: calc(0.5rem + 2vmin);
+  text-align: center;
+}
+#P404 .container h2 {
+  text-align: center;
+  font-size: calc(0.5rem + 1.6vmin);
+}
+#P404 .container a {
+  background: var(--main-color-);
+  padding: calc(0.5rem + 1.5vmin);
+  margin: calc(1rem + 1.5vmin);
+  text-decoration: none;
+  color: #fff;
+}
+/* #endregion */
 
 /*#region    ENTERING UNDER 1500px  */
 @media screen and (min-width: 1500px) {
@@ -1301,6 +1349,9 @@ hr {
   .sectionBSite {
     min-height: 800px;
   }
+  .ulNav li a {
+    font-size: calc(0.7rem + 0.7vmin);
+  }
 }
 /* #endregion */
 /*#region    ENTERING UNDER 1200PX */
@@ -1309,8 +1360,11 @@ hr {
     padding: 15px 30px;
   }
   .ulNav li a {
-    font-size: 16.5px;
+    font-size: calc(0.5rem + 1vmin);
     padding: 10px 5px;
+  }
+  .logo {
+    font-size: calc(1rem + 1vmin) !important;
   }
   section#faq .faq__content .questions {
     padding: 0.3rem 1.5rem 0.5rem 1rem !important;
@@ -1322,13 +1376,17 @@ hr {
   .sectionWhy {
     padding: 15px 40px 70px 40px;
   }
+  .navigation {
+    padding: 20px calc(1.5rem + 0.5vmin) !important;
+  }
   .ulNav li a {
-    height: 4rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
+    font-size: calc(0.65rem + 0.6vmin);
   }
   .logo {
-    font-size: 34px !important;
+    font-size: calc(1rem + 1vmin) !important;
     align-items: center;
   }
   #points .container.haut .imgBox {
