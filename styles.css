@@ -884,6 +884,8 @@ header.sticky .ulNav li a:hover:after {
   border-radius: 10px;
   overflow: hidden; /*pour ne pas que le contenu déborde. overflow scroll pour rajouter une scrolling bar*/
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
 }
 .containerCU::before {
   content: "";
@@ -1514,7 +1516,7 @@ hr {
 @media screen and (max-width: 650px) {
   .sectionWhy .titleWhy {
     text-align: center;
-    font-size: calc(2rem + 1vw);
+    font-size: calc(1.7rem + 1vw);
   }
   .sectionWhy .colWhy {
     flex-direction: column;
@@ -1672,6 +1674,9 @@ hr {
   #points .bas .carte {
     padding: calc(1.5rem + 1vmin) 1rem calc(1.5rem + 1vmin) calc(1.5rem + 1vmin);
   }
+  #tarifs p {
+    font-size: calc(1rem + 1.5vmin);
+  }
   .tarif__content .tarifs div:first-child {
     padding: 1.5rem 1rem;
   }
@@ -1700,6 +1705,9 @@ hr {
   }
   .accueil {
     padding: 100px 20px;
+  }
+  .sectionWhy {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 92%);
   }
 }
 /* #endregion */
